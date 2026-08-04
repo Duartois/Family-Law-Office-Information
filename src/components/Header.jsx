@@ -25,8 +25,9 @@ export default function Header() {
         </div>
 
         {/* Menu Desktop */}
-        <nav className="hidden md:flex space-x-8 text-sm uppercase tracking-wide">
+        <nav className="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
           <button onClick={() => handleNavClick('sobre')} className="hover:text-[#b89b5d] transition-colors duration-300 cursor-pointer bg-transparent border-none text-white">O Escritório</button>
+          <button onClick={() => handleNavClick('como-funciona')} className="hover:text-[#b89b5d] transition-colors duration-300 cursor-pointer bg-transparent border-none text-white">Como Funciona</button>
           <button onClick={() => handleNavClick('areas')} className="hover:text-[#b89b5d] transition-colors duration-300 cursor-pointer bg-transparent border-none text-white">Áreas de Atuação</button>
           <button onClick={() => handleNavClick('contato')} className="hover:text-[#b89b5d] transition-colors duration-300 cursor-pointer bg-transparent border-none text-white">Contato</button>
         </nav>
@@ -48,6 +49,7 @@ export default function Header() {
           >
             <div className="flex flex-col items-center py-6 space-y-4 text-sm uppercase tracking-wide">
               <button onClick={() => handleNavClick('sobre')} className="hover:text-[#b89b5d] bg-transparent border-none text-white cursor-pointer">O Escritório</button>
+              <button onClick={() => handleNavClick('como-funciona')} className="hover:text-[#b89b5d] bg-transparent border-none text-white cursor-pointer">Como Funciona</button>
               <button onClick={() => handleNavClick('areas')} className="hover:text-[#b89b5d] bg-transparent border-none text-white cursor-pointer">Áreas de Atuação</button>
               <button onClick={() => handleNavClick('contato')} className="hover:text-[#b89b5d] bg-transparent border-none text-white cursor-pointer">Contato</button>
             </div>

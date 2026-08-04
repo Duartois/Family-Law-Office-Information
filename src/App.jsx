@@ -1,8 +1,9 @@
 import './index.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import LawyersBar from './components/LawyersBar' 
+import LawyersBar from './components/LawyersBar'
 import About from './components/About'
+import HowItWorks from './components/HowItWorks'
 import Services from './components/Services'
 import Contact from './components/Contact'
 
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <LawyersBar /> 
       <About />
+      <HowItWorks />
       <Services />
       <Contact />
     </div>
