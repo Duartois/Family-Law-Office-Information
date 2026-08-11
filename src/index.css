@@ -4,7 +4,9 @@ html {
 
   scroll-padding-top: 80px; 
 }
-
+section {
+  min-height: 100vh;
+}
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f8f9fa;
