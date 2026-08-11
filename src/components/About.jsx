@@ -10,8 +10,8 @@ export default function About() {
   ];
 
   return (
-    <section id="sobre" className="bg-[#7c7471] text-white py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="sobre" className="bg-[#fffff] text-black relative flex items-center py-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto relative items-center px-4">
         
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -24,7 +24,7 @@ export default function About() {
             Nossa Trajetória
           </h2>
           <div className="w-24 h-1 bg-[#b89b5d] mx-auto mb-6"></div>
-          <p className="max-w-3xl mx-auto text-gray-200 leading-relaxed text-lg">
+          <p className="max-w-3xl mx-auto text-gray-600 leading-relaxed text-lg">
             Com quase três décadas de atuação, a Coppí & Duarte consolidou-se pela busca incansável por soluções jurídicas personalizadas. Entendemos que o Direito de Família exige um olhar humano e altamente estratégico para proteger os interesses de nossos clientes.
           </p>
         </motion.div>
@@ -43,7 +43,7 @@ export default function About() {
                 {feat.icon}
               </div>
               <h3 className="text-2xl font-serif mb-2">{feat.title}</h3>
-              <p className="text-gray-300 text-sm uppercase tracking-wider">{feat.desc}</p>
+              <p className="text-gray-600 text-sm uppercase tracking-wider">{feat.desc}</p>
             </motion.div>
           ))}
         </div>
