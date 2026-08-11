@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { scrollToSection } from '../utils/scrollTo'; // Importa a função
+import heroImg from '../assets/ensaioduartecoppi.jpg';
 
 export default function Hero() {
   return (
@@ -51,12 +52,12 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="lg:w-1/2 flex justify-center"
+        className="lg:w-1/2 flex justify-center"
         >
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[#b89b5d]/50 z-0 hidden md:block"></div>
             <img 
-              src="https://placehold.co/600x700/e2e8f0/1a202c?text=Foto+Advogadas" 
+              src={heroImg} 
               alt="Advogadas Coppí & Duarte" 
               className="w-full max-w-[400px] md:max-w-md object-cover shadow-2xl relative z-10 border border-[#b89b5d]"
             />
