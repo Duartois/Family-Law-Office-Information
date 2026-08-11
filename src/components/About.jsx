@@ -11,7 +11,7 @@ export default function About() {
   ];
 
   return (
-    <section id="sobre" className="bg-[#7c7471] text-white py-24 overflow-hidden relative">
+    <section id="sobre" className="bg-white text-gray-900 py-24 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4">
         
         {/* Cabeçalho da Seção */}
@@ -25,11 +25,11 @@ export default function About() {
           <span className="text-[#b89b5d] text-sm uppercase tracking-[0.25em] font-semibold mb-3 block">
             Quem Somos
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif mb-4 tracking-wide">
+          <h2 className="text-3xl md:text-5xl font-serif mb-4 tracking-wide text-gray-900">
             Nossa Trajetória e Compromisso
           </h2>
           <div className="w-24 h-1 bg-[#b89b5d] mx-auto mb-6"></div>
-          <p className="max-w-3xl mx-auto text-gray-200 leading-relaxed text-lg font-light">
+          <p className="max-w-3xl mx-auto text-gray-600 leading-relaxed text-lg font-light">
             Unimos experiência profunda no Direito de Família e Sucessões a uma visão moderna e estratégica, prestando um suporte jurídico de alto padrão.
           </p>
         </motion.div>
@@ -66,21 +66,21 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-6 space-y-6"
           >
-            <h3 className="text-2xl md:text-3xl font-serif text-[#f3ebd8]">
+            <h3 className="text-2xl md:text-3xl font-serif text-gray-900">
               Uma advocácia voltada para a proteção e o bem-estar familiar
             </h3>
             
-            <p className="text-gray-200 leading-relaxed text-base font-light">
+            <p className="text-gray-600 leading-relaxed text-base font-light">
               Fundada sob pilares de ética inegociável, competência técnica e sensibilidade humana, a <strong className="text-[#b89b5d] font-normal">Coppí & Duarte</strong> atua na condução de litígios complexos e planejamentos sucessórios preventivos. Entendemos que cada caso familiar carrega histórias únicas que merecem proteção rigorosa e acolhimento.
             </p>
 
             <div className="space-y-4 pt-2">
               {highlights.map((item, idx) => (
-                <div key={idx} className="flex items-start space-x-3 bg-white/5 p-4 border-l-2 border-[#b89b5d] backdrop-blur-sm">
+                <div key={idx} className="flex items-start space-x-3 bg-gray-50 p-4 border-l-2 border-[#b89b5d] shadow-sm">
                   <CheckCircle2 className="text-[#b89b5d] w-6 h-6 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="text-white font-serif text-lg">{item.title}</h4>
-                    <p className="text-gray-300 text-sm font-light">{item.desc}</p>
+                    <h4 className="text-gray-900 font-serif text-lg">{item.title}</h4>
+                    <p className="text-gray-600 text-sm font-light">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -90,19 +90,19 @@ export default function About() {
         </div>
 
         {/* Cards Inferiores de Destaque Rápido */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-white/5 backdrop-blur-sm p-8 text-center hover:bg-white/10 transition-colors duration-300 border border-white/5"
+            className="bg-gray-50 p-8 text-center hover:bg-gray-100 transition-colors duration-300 border border-gray-200 shadow-sm"
           >
             <div className="text-[#b89b5d] flex justify-center mb-4">
               <Award size={36} />
             </div>
-            <h4 className="text-2xl font-serif mb-2">Tradição</h4>
-            <p className="text-gray-300 text-sm tracking-wide">Quase 3 décadas de excelência jurídica comprovada.</p>
+            <h4 className="text-2xl font-serif mb-2 text-gray-900">Tradição</h4>
+            <p className="text-gray-600 text-sm tracking-wide">Quase 3 décadas de excelência jurídica comprovada.</p>
           </motion.div>
 
           <motion.div
@@ -110,13 +110,13 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-white/5 backdrop-blur-sm p-8 text-center hover:bg-white/10 transition-colors duration-300 border border-white/5"
+            className="bg-gray-50 p-8 text-center hover:bg-gray-100 transition-colors duration-300 border border-gray-200 shadow-sm"
           >
             <div className="text-[#b89b5d] flex justify-center mb-4">
               <Users size={36} />
             </div>
-            <h4 className="text-2xl font-serif mb-2">Atendimento Global</h4>
-            <p className="text-gray-300 text-sm tracking-wide">Suporte presencial e online para clientes em todo o Brasil e exterior.</p>
+            <h4 className="text-2xl font-serif mb-2 text-gray-900">Atendimento Global</h4>
+            <p className="text-gray-600 text-sm tracking-wide">Suporte presencial e online para clientes em todo o Brasil e exterior.</p>
           </motion.div>
 
           <motion.div
@@ -124,13 +124,13 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="bg-white/5 backdrop-blur-sm p-8 text-center hover:bg-white/10 transition-colors duration-300 border border-white/5"
+            className="bg-gray-50 p-8 text-center hover:bg-gray-100 transition-colors duration-300 border border-gray-200 shadow-sm"
           >
             <div className="text-[#b89b5d] flex justify-center mb-4">
               <ShieldCheck size={36} />
             </div>
-            <h4 className="text-2xl font-serif mb-2">Estratégia & Sigilo</h4>
-            <p className="text-gray-300 text-sm tracking-wide">Soluções discretas, seguras e focadas em resultados eficientes.</p>
+            <h4 className="text-2xl font-serif mb-2 text-gray-900">Estratégia & Sigilo</h4>
+            <p className="text-gray-600 text-sm tracking-wide">Soluções discretas, seguras e focadas em resultados eficientes.</p>
           </motion.div>
         </div>
         
