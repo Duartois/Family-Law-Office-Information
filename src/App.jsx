@@ -6,7 +6,6 @@ import About from './components/About'
 import HowItWorks from './components/HowItWorks'
 import Services from './components/Services'
 import Contact from './components/Contact'
-import HowItWorks from './components/HowitWorks'
 
 function App() {
   return (
