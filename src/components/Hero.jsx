@@ -48,12 +48,12 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
           className="lg:w-1/2 flex justify-center"
         >
-          <div className="relative w-full max-w-[260px] sm:max-w-[320px] md:max-w-md mx-auto">
+          <div className="relative w-full max-w-[320px] sm:max-w-[420px] md:max-w-lg mx-auto">
             <div className="absolute -top-4 -left-4 w-full h-full border-2 border-gold/50 z-0 hidden md:block" />
             <img
               src={heroImg}
               alt="Advogadas Coppí & Duarte"
-              className="w-full aspect-[3/4] object-cover object-top shadow-2xl relative z-10 border border-gold"
+              className="w-full aspect-[4/3] object-cover object-center shadow-2xl relative z-10 border border-gold"
             />
           </div>
         </motion.div>

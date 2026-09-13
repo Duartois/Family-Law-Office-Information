@@ -9,7 +9,6 @@
 
 html {
   scroll-padding-top: 80px;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -29,9 +28,6 @@ h1, h2, h3, h4, .font-serif {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

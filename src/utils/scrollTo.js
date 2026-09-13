@@ -21,8 +21,9 @@ export const scrollToSection = (targetId) => {
       // Aplica a curva de easing
       const ease = easeInOutQuad(progress);
 
-      // Rola a página
-      window.scrollTo(0, startY + diff * ease);
+      // Rola a página (behavior: 'auto' evita que o navegador tente
+      // suavizar cada chamada por cima da nossa própria animação)
+      window.scrollTo({ top: startY + diff * ease, left: 0, behavior: 'auto' });
 
       // Continua a animação se não terminou
       if (progress < 1) {
@@ -49,7 +50,7 @@ export const scrollToTop = () => {
     const progress = Math.min(elapsed / duration, 1);
     const ease = easeInOutQuad(progress);
 
-    window.scrollTo(0, startY + diff * ease);
+    window.scrollTo({ top: startY + diff * ease, left: 0, behavior: 'auto' });
 
     if (progress < 1) {
       requestAnimationFrame(animateScroll);

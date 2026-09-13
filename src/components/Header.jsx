@@ -60,10 +60,11 @@ export default function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.nav
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-gray-900 border-t border-gray-800 overflow-hidden"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden absolute top-full left-0 right-0 bg-gray-900 border-t border-gray-800 shadow-xl"
           >
             <div className="flex flex-col items-center py-6 space-y-4 text-sm uppercase tracking-wide">
               {NAV_LINKS.map((link) => (
