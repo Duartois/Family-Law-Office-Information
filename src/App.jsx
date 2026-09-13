@@ -6,17 +6,19 @@ import About from './components/About'
 import HowItWorks from './components/HowItWorks'
 import Services from './components/Services'
 import Contact from './components/Contact'
+import WhatsAppFloatingButton from './components/WhatsAppFloatingButton'
 
 function App() {
   return (
     <div className="bg-gray-50 min-h-screen">
       <Header />
       <Hero />
-      <LawyersBar /> 
+      <LawyersBar />
       <About />
       <HowItWorks />
       <Services />
       <Contact />
+      <WhatsAppFloatingButton />
     </div>
   )
 }
