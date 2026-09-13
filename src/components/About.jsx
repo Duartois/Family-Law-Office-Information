@@ -17,10 +17,10 @@ const STATS = [
 
 export default function About() {
   return (
-    <section id="sobre" className="bg-white text-gray-900 py-24 overflow-hidden relative">
+    <section id="sobre" className="bg-white text-gray-900 py-16 md:py-24 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4">
 
-        <Reveal className="text-center mb-16">
+        <Reveal className="text-center mb-10 md:mb-16">
           <span className="text-gold text-sm uppercase tracking-[0.25em] font-semibold mb-3 block">
             Quem Somos
           </span>
@@ -33,16 +33,16 @@ export default function About() {
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center mb-10 md:mb-16">
 
           <Reveal variants={fadeLeft} duration={0.8} className="lg:col-span-6 flex justify-center">
-            <div className="relative w-full max-w-lg">
+            <div className="relative w-full max-w-sm md:max-w-lg">
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-gold/60 z-0 hidden md:block" />
               <div className="absolute -bottom-4 -right-4 w-full h-full bg-gold/10 z-0 hidden md:block" />
               <img
                 src={equipeImg}
                 alt="Equipe Coppí & Duarte Advogados"
-                className="w-full h-auto object-cover shadow-2xl relative z-10 border border-gold/40 rounded-sm"
+                className="w-full aspect-[4/3] md:aspect-auto md:h-auto object-cover shadow-2xl relative z-10 border border-gold/40 rounded-sm"
               />
             </div>
           </Reveal>
@@ -70,12 +70,12 @@ export default function About() {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 pt-8 border-t border-gray-200">
           {STATS.map((stat, idx) => (
             <Reveal
               key={stat.title}
               delay={idx * 0.15}
-              className="bg-gray-50 p-8 text-center hover:bg-gray-100 transition-colors duration-300 border border-gray-200 shadow-sm"
+              className="bg-gray-50 p-6 md:p-8 text-center hover:bg-gray-100 transition-colors duration-300 border border-gray-200 shadow-sm"
             >
               <div className="text-gold flex justify-center mb-4">
                 <stat.icon size={36} />

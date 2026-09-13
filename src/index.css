@@ -12,10 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-section {
-  min-height: 100vh;
-}
-
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f8f9fa;

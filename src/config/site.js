@@ -17,9 +17,9 @@ export function buildWhatsAppLink(message) {
 
 // Mensagens pré-definidas para cada CTA, mantendo contexto de onde o usuário veio.
 export const WHATSAPP_MESSAGES = {
-  geral: 'Olá! Encontrei o site da Coppí & Duarte e gostaria de mais informações.',
+  geral: 'Olá! Vi o informativo da Coppí & Duarte e gostaria de mais informações.',
   consulta: 'Olá! Gostaria de agendar uma consulta com a Coppí & Duarte.',
-  comoFunciona: 'Olá! Vim pelo site e gostaria de entender como funciona o atendimento.',
+  comoFunciona: 'Olá! Gostaria de entender melhor como funciona o atendimento da Coppí & Duarte.',
   encerramento: 'Olá! Gostaria de iniciar um atendimento com a Coppí & Duarte Advogadas.',
-  area: (areaTitle) => `Olá! Vim pelo site e gostaria de falar sobre ${areaTitle} com uma advogada.`,
+  area: (areaTitle) => `Olá! Gostaria de falar sobre ${areaTitle} com uma advogada da Coppí & Duarte.`,
 };

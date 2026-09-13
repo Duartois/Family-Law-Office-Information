@@ -7,10 +7,10 @@ import heroImg from '../assets/ensaioduartecoppi.jpg';
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative bg-gray-900 text-white min-h-[100vh] flex items-center overflow-hidden">
+    <section id="hero" className="relative bg-gray-900 text-white min-h-[100svh] flex items-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900 to-gray-800 z-10" />
 
-      <div className="relative z-20 max-w-7xl mx-auto px-4 py-16 flex flex-col-reverse lg:flex-row items-center w-full gap-10 lg:gap-0">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 py-10 sm:py-16 flex flex-col-reverse lg:flex-row items-center w-full gap-6 lg:gap-0">
 
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -48,12 +48,12 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
           className="lg:w-1/2 flex justify-center"
         >
-          <div className="relative">
+          <div className="relative w-full max-w-[260px] sm:max-w-[320px] md:max-w-md mx-auto">
             <div className="absolute -top-4 -left-4 w-full h-full border-2 border-gold/50 z-0 hidden md:block" />
             <img
               src={heroImg}
               alt="Advogadas Coppí & Duarte"
-              className="w-full max-w-[400px] md:max-w-md object-cover shadow-2xl relative z-10 border border-gold"
+              className="w-full aspect-[3/4] object-cover object-top shadow-2xl relative z-10 border border-gold"
             />
           </div>
         </motion.div>

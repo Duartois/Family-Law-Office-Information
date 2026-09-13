@@ -51,9 +51,9 @@ export default function Services() {
   };
 
   return (
-    <section id="areas" className="bg-gray-50 py-24">
+    <section id="areas" className="bg-gray-50 py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-4">
-        <Reveal className="text-center mb-16">
+        <Reveal className="text-center mb-10 md:mb-16">
           <span className="text-gold text-sm uppercase tracking-widest font-semibold">Especialidades</span>
           <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mt-2 mb-4">Áreas de Atuação</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">Clique em cada tema abaixo para saber como podemos proteger sua família e seu patrimônio.</p>
@@ -116,7 +116,7 @@ export default function Services() {
           })}
         </div>
 
-        <p className="text-center text-gray-500 mt-16 text-sm italic">
+        <p className="text-center text-gray-500 mt-10 md:mt-16 text-sm italic">
           Consulte-nos sobre outros assuntos não destacados.
         </p>
       </div>

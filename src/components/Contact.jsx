@@ -6,8 +6,8 @@ import { SITE, WHATSAPP_MESSAGES } from '../config/site';
 
 export default function Contact() {
   return (
-    <section id="contato" className="bg-gray-900 text-white py-24">
-      <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section id="contato" className="bg-gray-900 text-white py-16 md:py-24">
+      <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
 
         <Reveal variants={fadeLeft}>
           <span className="text-gold text-sm uppercase tracking-[0.25em] font-semibold mb-3 block">
@@ -48,7 +48,7 @@ export default function Contact() {
 
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 mt-20 pt-8 border-t border-gray-800 text-center text-xs text-gray-500 tracking-wide">
+      <div className="max-w-7xl mx-auto px-4 mt-12 md:mt-20 pt-8 pb-20 md:pb-0 border-t border-gray-800 text-center text-xs text-gray-500 tracking-wide">
         <p>&copy; {new Date().getFullYear()} {SITE.fullName.toUpperCase()}. Todos os direitos reservados.</p>
       </div>
     </section>

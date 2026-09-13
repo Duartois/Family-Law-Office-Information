@@ -38,10 +38,10 @@ const FEATURES = [
 
 export default function HowItWorks() {
   return (
-    <section id="como-funciona" className="bg-taupe py-24">
+    <section id="como-funciona" className="bg-taupe py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
 
-        <Reveal className="text-center mb-16">
+        <Reveal className="text-center mb-10 md:mb-16">
           <span className="text-gold text-sm uppercase tracking-[0.2em] font-semibold mb-2 block">
             Como Funciona
           </span>
@@ -54,12 +54,12 @@ export default function HowItWorks() {
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
           {FEATURES.map((feat, index) => (
             <Reveal
               key={feat.title}
               delay={index * 0.1}
-              className="bg-white/5 backdrop-blur-sm p-8 border-t-2 border-gold text-center hover:bg-white/10 transition-colors duration-300"
+              className="bg-white/5 backdrop-blur-sm p-6 md:p-8 border-t-2 border-gold text-center hover:bg-white/10 transition-colors duration-300"
             >
               <div className="text-gold flex justify-center mb-5">
                 <feat.icon size={36} />
@@ -70,7 +70,7 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <Reveal delay={0.3} className="text-center mt-16">
+        <Reveal delay={0.3} className="text-center mt-10 md:mt-16">
           <p className="text-gray-200 mb-6 text-lg">
             Entre em contato agora e converse com uma advogada.
           </p>
