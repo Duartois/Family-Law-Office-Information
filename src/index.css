@@ -1,12 +1,21 @@
 @import "tailwindcss";
 
-html {
-
-  scroll-padding-top: 80px; 
+/* Paleta única do site: qualquer alteração de cor é feita apenas aqui. */
+@theme {
+  --color-gold: #b89b5d;
+  --color-gold-dark: #9c8348;
+  --color-taupe: #7c7471;
 }
+
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+}
+
 section {
   min-height: 100vh;
 }
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f8f9fa;
@@ -16,4 +25,21 @@ body {
 
 h1, h2, h3, h4, .font-serif {
   font-family: 'Playfair Display', serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
