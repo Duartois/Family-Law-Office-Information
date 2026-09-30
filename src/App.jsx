@@ -1,23 +1,18 @@
+import { Routes, Route } from 'react-router-dom'
 import './index.css'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import LawyersBar from './components/LawyersBar'
-import About from './components/About'
-import HowItWorks from './components/HowItWorks'
-import Services from './components/Services'
-import Contact from './components/Contact'
+import ScrollToTop from './components/ScrollToTop'
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton'
+import Home from './pages/Home'
+import FgtsDoencaGrave from './pages/FgtsDoencaGrave'
 
 function App() {
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <Header />
-      <Hero />
-      <LawyersBar />
-      <About />
-      <HowItWorks />
-      <Services />
-      <Contact />
+    <div className="min-h-screen">
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/saque-fgts-doenca-grave" element={<FgtsDoencaGrave />} />
+      </Routes>
       <WhatsAppFloatingButton />
     </div>
   )

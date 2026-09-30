@@ -1,42 +1,32 @@
-import { motion } from 'framer-motion';
 import WhatsAppIcon from './icons/WhatsAppIcon';
 import { buildWhatsAppLink } from '../config/site';
 
-const VARIANTS = {
-  solid: 'bg-gold hover:bg-gold-dark text-white shadow-lg hover:shadow-gold/30',
-  outline: 'border border-gold hover:bg-gold/10 text-gold bg-transparent',
-  whatsapp: 'bg-[#25D366] hover:bg-[#1ebe57] text-white shadow-lg hover:shadow-[#25D366]/30',
-};
-
 const SIZES = {
-  sm: 'px-5 py-2.5 text-xs',
-  md: 'px-8 py-3 text-sm',
-  lg: 'px-10 py-4 text-base',
+  sm: 'px-5 py-2.5 text-sm',
+  md: 'px-6 py-3 text-base',
+  lg: 'px-8 py-4 text-lg',
 };
 
 /**
  * CTA único para todo o site: sempre abre uma conversa de WhatsApp já
- * preenchida. Centralizar aqui evita duplicar o link/telefone em cada seção.
+ * preenchida. Botão simples, bem arredondado, sem sombra/efeito de destaque.
  */
 export default function WhatsAppCTA({
   message,
-  variant = 'solid',
   size = 'md',
   icon = true,
   className = '',
   children,
 }) {
   return (
-    <motion.a
+    <a
       href={buildWhatsAppLink(message)}
       target="_blank"
       rel="noopener noreferrer"
-      whileHover={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
-      className={`inline-flex items-center justify-center gap-2 uppercase tracking-wider font-medium transition-colors duration-300 cursor-pointer ${VARIANTS[variant]} ${SIZES[size]} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full font-bold uppercase tracking-wide bg-whatsapp hover:bg-whatsapp-dark text-white transition-colors duration-200 ${SIZES[size]} ${className}`}
     >
-      {icon && <WhatsAppIcon size={size === 'lg' ? 22 : 18} />}
+      {icon && <WhatsAppIcon size={size === 'lg' ? 24 : 20} />}
       {children}
-    </motion.a>
+    </a>
   );
 }

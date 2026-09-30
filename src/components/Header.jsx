@@ -1,88 +1,19 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { scrollToSection } from '../utils/scrollTo';
-import WhatsAppCTA from './WhatsAppCTA';
-import { WHATSAPP_MESSAGES } from '../config/site';
-
-const NAV_LINKS = [
-  { id: 'sobre', label: 'O Escritório' },
-  { id: 'como-funciona', label: 'Como Funciona' },
-  { id: 'areas', label: 'Áreas de Atuação' },
-];
+import { Link } from 'react-router-dom';
+import { SITE } from '../config/site';
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleNavClick = (id) => {
-    scrollToSection(id);
-    setIsOpen(false);
-  };
-
   return (
-    <header className="bg-gray-900/95 backdrop-blur-sm text-white py-4 sticky top-0 z-50 shadow-lg border-b border-gold/20">
-      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center gap-4">
-
-        <button
-          type="button"
-          className="flex flex-col text-left cursor-pointer bg-transparent border-none"
-          onClick={() => scrollToSection('hero')}
-        >
-          <span className="text-gold text-xl md:text-2xl font-serif tracking-wider leading-none">COPPI & DUARTE</span>
-          <span className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mt-1">Advogadas Associadas</span>
-        </button>
-
-        <nav className="hidden md:flex items-center space-x-6 text-sm uppercase tracking-wide">
-          {NAV_LINKS.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => handleNavClick(link.id)}
-              className="hover:text-gold transition-colors duration-300 cursor-pointer bg-transparent border-none text-white"
-            >
-              {link.label}
-            </button>
-          ))}
-          <WhatsAppCTA message={WHATSAPP_MESSAGES.geral} variant="whatsapp" size="sm">
-            WhatsApp
-          </WhatsAppCTA>
-        </nav>
-
-        <button
-          className="md:hidden text-gold bg-transparent border-none"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
-          aria-expanded={isOpen}
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+    <header className="bg-white py-4 border-b border-gray-200">
+      <div className="max-w-5xl mx-auto px-4 flex flex-wrap items-center justify-between gap-3">
+        <Link to="/" className="font-display text-2xl md:text-3xl uppercase tracking-wide text-forest">
+          {SITE.name}
+        </Link>
+        <p className="text-ocre text-sm md:text-base font-medium text-right">
+          Está precisando de um advogado?
+          <br />
+          Conte com a {SITE.name}
+        </p>
       </div>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.nav
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden absolute top-full left-0 right-0 bg-gray-900 border-t border-gray-800 shadow-xl"
-          >
-            <div className="flex flex-col items-center py-6 space-y-4 text-sm uppercase tracking-wide">
-              {NAV_LINKS.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => handleNavClick(link.id)}
-                  className="hover:text-gold bg-transparent border-none text-white cursor-pointer"
-                >
-                  {link.label}
-                </button>
-              ))}
-              <WhatsAppCTA message={WHATSAPP_MESSAGES.geral} variant="whatsapp" size="sm">
-                Falar no WhatsApp
-              </WhatsAppCTA>
-            </div>
-          </motion.nav>
-        )}
-      </AnimatePresence>
     </header>
   );
 }

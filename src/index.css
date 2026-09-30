@@ -1,32 +1,37 @@
 @import "tailwindcss";
 
-/* Paleta única do site: qualquer alteração de cor é feita apenas aqui. */
+/* Paleta e fontes únicas do site: qualquer alteração é feita apenas aqui. */
 @theme {
-  --color-gold: #b89b5d;
-  --color-gold-dark: #9c8348;
-  --color-taupe: #7c7471;
+  --color-forest: #0F2A22;
+  --color-forest-dark: #0A1D17;
+  --color-ocre: #C9A227;
+  --color-bordo: #B22222;
+  --color-section-bg: #EEF0F2;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #1ebe57;
 }
 
 html {
-  scroll-padding-top: 80px;
+  scroll-padding-top: 16px;
   overflow-x: hidden;
   width: 100%;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f8f9fa;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  background-color: #ffffff;
   color: #1f2937;
   overflow-x: hidden;
   width: 100%;
 }
 
-h1, h2, h3, h4, .font-serif {
-  font-family: 'Playfair Display', serif;
+h1, h2, h3, h4, .font-display {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.02em;
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid var(--color-ocre);
   outline-offset: 2px;
 }
 

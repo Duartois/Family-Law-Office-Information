@@ -1,55 +1,55 @@
-import { MapPin, Clock } from 'lucide-react';
-import Reveal from './Reveal';
-import WhatsAppCTA from './WhatsAppCTA';
-import { fadeLeft, fadeRight } from '../utils/motion';
-import { SITE, WHATSAPP_MESSAGES } from '../config/site';
+import { Mail, MapPin } from 'lucide-react';
+import SectionHeading from './SectionHeading';
+import WhatsAppIcon from './icons/WhatsAppIcon';
+import { SITE, buildWhatsAppLink, WHATSAPP_MESSAGES } from '../config/site';
 
 export default function Contact() {
   return (
-    <section id="contato" className="bg-gray-900 text-white py-16 md:py-24">
-      <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
+    <section id="contato" className="bg-white py-14 px-4">
+      <div className="max-w-2xl mx-auto">
+        <SectionHeading title="Informações de Contato" color="forest" />
 
-        <Reveal variants={fadeLeft}>
-          <span className="text-gold text-sm uppercase tracking-[0.25em] font-semibold mb-3 block">
-            Fale Conosco
-          </span>
-          <h2 className="text-3xl md:text-4xl font-serif text-white mb-6 leading-tight">
-            Converse agora com uma advogada
-          </h2>
-          <p className="text-gray-300 mb-10 leading-relaxed">
-            Atendimento imediato e sigiloso pelo WhatsApp, online (por vídeo conferência) ou presencial em nosso escritório na Av. Paulista. O acompanhamento do seu caso é feito mensalmente com total comodidade e discrição.
-          </p>
-
-          <WhatsAppCTA message={WHATSAPP_MESSAGES.encerramento} size="lg">
-            Iniciar Atendimento
-          </WhatsAppCTA>
-        </Reveal>
-
-        <Reveal variants={fadeRight} className="bg-gray-800/50 backdrop-blur p-8 md:p-10 border border-gray-700 space-y-6">
-          <div className="flex items-start group">
-            <MapPin className="text-gold mt-1 mr-4 flex-shrink-0 group-hover:scale-110 transition-transform" />
+        <div className="mt-10 space-y-6">
+          <div className="flex items-start gap-4">
+            <Mail className="text-ocre flex-shrink-0" size={26} />
             <div>
-              <h4 className="text-white font-medium text-sm uppercase tracking-wide mb-1">Endereço</h4>
-              <p className="text-gray-300">
-                {SITE.address.street}<br />
+              <h4 className="text-xs uppercase tracking-wide text-gray-500 mb-1">E-mail</h4>
+              <a href={`mailto:${SITE.email}`} className="text-forest font-medium break-all">
+                {SITE.email}
+              </a>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <WhatsAppIcon size={26} className="text-ocre flex-shrink-0" />
+            <div>
+              <h4 className="text-xs uppercase tracking-wide text-gray-500 mb-1">WhatsApp</h4>
+              <a href={buildWhatsAppLink(WHATSAPP_MESSAGES.geral)} target="_blank" rel="noopener noreferrer" className="text-forest font-medium">
+                {SITE.whatsappDisplay}
+              </a>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <MapPin className="text-ocre flex-shrink-0" size={26} />
+            <div>
+              <h4 className="text-xs uppercase tracking-wide text-gray-500 mb-1">Endereço</h4>
+              <p className="text-forest font-medium">
+                {SITE.address.street}
+                <br />
                 {SITE.address.district}
               </p>
             </div>
           </div>
-
-          <div className="flex items-start group">
-            <Clock className="text-gold mt-1 mr-4 flex-shrink-0 group-hover:scale-110 transition-transform" />
-            <div>
-              <h4 className="text-white font-medium text-sm uppercase tracking-wide mb-1">Atendimento</h4>
-              <p className="text-gray-300">Segunda a sexta, das 9h às 18h — respostas via WhatsApp em horário comercial.</p>
-            </div>
-          </div>
-        </Reveal>
-
+        </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 mt-12 md:mt-20 pt-8 pb-20 md:pb-0 border-t border-gray-800 text-center text-xs text-gray-500 tracking-wide">
-        <p>&copy; {new Date().getFullYear()} {SITE.fullName.toUpperCase()}. Todos os direitos reservados.</p>
+      <div className="max-w-5xl mx-auto mt-14 pt-8 border-t border-gray-200 text-center text-xs text-gray-500 space-y-1">
+        <p>{SITE.fullName}</p>
+        <p>
+          {SITE.lawyers.map((l) => `${l.name} — ${l.oab}`).join(' · ')}
+        </p>
+        <p>&copy; {new Date().getFullYear()} {SITE.fullName}. Todos os direitos reservados.</p>
       </div>
     </section>
   );

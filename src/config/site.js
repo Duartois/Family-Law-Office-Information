@@ -4,10 +4,18 @@ export const SITE = {
   fullName: 'Coppí & Duarte Advogadas Associadas',
   whatsappNumber: '5511987679957',
   whatsappDisplay: '(11) 98767-9957',
+  // TODO: substituir pelo e-mail oficial do escritório quando for criado.
+  email: 'matheusdugoncalves@gmail.com',
+  yearsOfExperience: '27',
+  lawyers: [
+    { name: 'Paula Coppi', oab: 'OAB/SP nº [preencher]' },
+    { name: 'Viviane Duarte', oab: 'OAB/SP nº [preencher]' },
+  ],
   address: {
     street: 'Av. Paulista, nº 1.439, 1º andar, Cj. 12',
     district: 'Bela Vista - CEP 01311-200, São Paulo/SP',
   },
+  siteUrl: 'https://www.coppieduarte.com.br', // TODO: confirmar domínio definitivo
 };
 
 export function buildWhatsAppLink(message) {
@@ -15,11 +23,9 @@ export function buildWhatsAppLink(message) {
   return message ? `${base}?text=${encodeURIComponent(message)}` : base;
 }
 
-// Mensagens pré-definidas para cada CTA, mantendo contexto de onde o usuário veio.
+// Mensagem padrão única, conforme solicitado: todos os botões da home usam a
+// mesma mensagem. A página do FGTS tem sua própria mensagem de contexto.
 export const WHATSAPP_MESSAGES = {
-  geral: 'Olá! Vi o informativo da Coppí & Duarte e gostaria de mais informações.',
-  consulta: 'Olá! Gostaria de agendar uma consulta com a Coppí & Duarte.',
-  comoFunciona: 'Olá! Gostaria de entender melhor como funciona o atendimento da Coppí & Duarte.',
-  encerramento: 'Olá! Gostaria de iniciar um atendimento com a Coppí & Duarte Advogadas.',
-  area: (areaTitle) => `Olá! Gostaria de falar sobre ${areaTitle} com uma advogada da Coppí & Duarte.`,
+  geral: 'Olá! Vim pelo site e gostaria de agendar uma consulta.',
+  fgts: 'Olá! Vim pela página do FGTS por doença grave e gostaria de saber se tenho direito.',
 };
