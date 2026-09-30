@@ -11,7 +11,7 @@ export default function Contact() {
 
         <div className="mt-10 space-y-6">
           <div className="flex items-start gap-4">
-            <Mail className="text-ocre flex-shrink-0" size={26} />
+            <Mail className="text-ocre flex-shrink-0 w-6 h-6 md:w-7 md:h-7" />
             <div>
               <h4 className="text-xs uppercase tracking-wide text-gray-500 mb-1">E-mail</h4>
               <a href={`mailto:${SITE.email}`} className="text-forest font-medium break-all">
@@ -21,7 +21,7 @@ export default function Contact() {
           </div>
 
           <div className="flex items-start gap-4">
-            <WhatsAppIcon size={26} className="text-ocre flex-shrink-0" />
+            <WhatsAppIcon className="text-ocre flex-shrink-0 w-6 h-6 md:w-7 md:h-7" />
             <div>
               <h4 className="text-xs uppercase tracking-wide text-gray-500 mb-1">WhatsApp</h4>
               <a href={buildWhatsAppLink(WHATSAPP_MESSAGES.geral)} target="_blank" rel="noopener noreferrer" className="text-forest font-medium">
@@ -31,7 +31,7 @@ export default function Contact() {
           </div>
 
           <div className="flex items-start gap-4">
-            <MapPin className="text-ocre flex-shrink-0" size={26} />
+            <MapPin className="text-ocre flex-shrink-0 w-6 h-6 md:w-7 md:h-7" />
             <div>
               <h4 className="text-xs uppercase tracking-wide text-gray-500 mb-1">Endereço</h4>
               <p className="text-forest font-medium">

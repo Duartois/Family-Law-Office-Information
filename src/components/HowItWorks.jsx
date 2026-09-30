@@ -14,8 +14,8 @@ export default function HowItWorks() {
 
         <div className="mt-10 space-y-8">
           <div className="flex items-start gap-4">
-            <MonitorHeadsetIcon size={36} className="text-ocre flex-shrink-0" />
-            <p className="text-gray-700 leading-relaxed">
+            <MonitorHeadsetIcon className="w-9 h-9 md:w-11 md:h-11 text-ocre flex-shrink-0" />
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
               Atualmente todo o procedimento judicial está online, até mesmo as audiências, de
               forma que nosso escritório aderiu a essa prática e oferece a possibilidade de
               consultas e reuniões por videoconferência. Agendamos uma data e um horário e você
@@ -25,8 +25,8 @@ export default function HowItWorks() {
           </div>
 
           <div className="flex items-start gap-4">
-            <CalendarCheckIcon size={36} className="text-ocre flex-shrink-0" />
-            <p className="text-gray-700 leading-relaxed">
+            <CalendarCheckIcon className="w-9 h-9 md:w-11 md:h-11 text-ocre flex-shrink-0" />
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
               O mesmo acontece com o envio de documentos, que poderá ser feito de forma online
               também, assim como o acompanhamento do seu caso, esteja ele sendo tratado de forma
               extrajudicial ou judicial.

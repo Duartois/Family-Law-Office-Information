@@ -150,8 +150,8 @@ export default function FgtsDoencaGrave() {
               <ul className="mt-4 space-y-4">
                 {DOCUMENTS.map(({ Icon, label }) => (
                   <li key={label} className="flex items-start gap-3">
-                    <Icon className="text-ocre flex-shrink-0" size={24} />
-                    <span className="leading-relaxed">{label}</span>
+                    <Icon className="text-ocre flex-shrink-0 w-6 h-6 md:w-7 md:h-7" />
+                    <span className="leading-relaxed text-base md:text-lg">{label}</span>
                   </li>
                 ))}
               </ul>
