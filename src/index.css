@@ -2,8 +2,8 @@
 
 /* Cores do site: fonte única. Para trocar uma cor, altere só aqui. */
 :root {
-  --azul-marinho: #0F2A22; /* fundo das seções e do bloco "Especialista em direito de família" */
-  --dourado: #C9A227; /* destaques, subtítulos e linhas divisórias */
+  --azul-marinho: #11212E; /* fundo de todas as seções (azul-marinho do site de referência) */
+  --dourado: #D3CF6E; /* amarelo-limão da referência: destaques, subtítulos, linhas e ícones */
   --verde-botao: #25D366; /* botões de WhatsApp */
   --verde-botao-hover: #1ebe57;
   --bordo: #B22222;
