@@ -20,7 +20,7 @@ export default function About() {
 
         <p className="mt-6 text-lg leading-relaxed text-center">
           Para elas, atuar com o Direito de Família é um sacerdócio, pois, mais do que
-          conhecimentos técnicos, é preciso ter habilidade e sensibilidade para ora
+          conhecimentos técnicos, é preciso ter habilidade e sensibilidade para, ora
           conscientizar aqueles que pensam em destruir, ora encorajar aqueles que se sentem
           destruídos.
         </p>
