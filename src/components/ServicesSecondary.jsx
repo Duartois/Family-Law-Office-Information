@@ -15,9 +15,9 @@ const ACTIONS = [
 
 export default function ServicesSecondary() {
   return (
-    <section className="bg-section-bg py-14 px-4 border-t border-gray-200">
+    <section className="bg-forest py-14 px-4">
       <div className="max-w-5xl mx-auto">
-        <SectionHeading title="Atuamos Também Em" subtitle="Como podemos te ajudar?" />
+        <SectionHeading title="Atuamos Também Em" subtitle="Como podemos te ajudar?" color="white" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mt-10">
           {ACTIONS.map((action) => (

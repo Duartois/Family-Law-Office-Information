@@ -14,9 +14,9 @@ const ACTIONS = [
 
 export default function Services() {
   return (
-    <section id="areas" className="bg-section-bg py-14 px-4">
+    <section id="areas" className="bg-forest py-14 px-4">
       <div className="max-w-5xl mx-auto">
-        <SectionHeading title="Ações em que Atuamos" subtitle="Como podemos te ajudar?" />
+        <SectionHeading title="Ações em que Atuamos" subtitle="Como podemos te ajudar?" color="white" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mt-10">
           {ACTIONS.map((action) => (
