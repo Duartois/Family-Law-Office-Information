@@ -34,6 +34,15 @@ body {
   width: 100%;
 }
 
+/* Linha fina dourada sob os títulos de seção: atravessa o container de lado a lado. */
+.linha-titulo {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 0.75rem;
+  background-color: var(--dourado);
+}
+
 h1, h2, h3, h4, .font-display {
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 0.02em;

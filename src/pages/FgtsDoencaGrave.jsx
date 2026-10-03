@@ -94,7 +94,7 @@ export default function FgtsDoencaGrave() {
             <h1 className="font-display uppercase text-3xl md:text-5xl tracking-wide leading-tight">
               Saque do FGTS por doença grave: quem tem direito e como pedir
             </h1>
-            <div className="w-16 h-[3px] bg-ocre mx-auto mt-4" />
+            <div className="linha-titulo" />
             <p className="mt-6 text-lg leading-relaxed">
               Receber o diagnóstico de uma doença grave já é difícil o suficiente — cuidar da
               parte burocrática não precisa ser. Se você ou um dependente enfrenta uma doença
@@ -191,7 +191,7 @@ export default function FgtsDoencaGrave() {
             <h2 className="font-display uppercase text-3xl md:text-4xl tracking-wide">
               Fale com {SITE.lawyers.map((l) => l.name).join(' e ')}
             </h2>
-            <div className="w-16 h-[3px] bg-ocre mx-auto mt-4" />
+            <div className="linha-titulo" />
             <p className="mt-6 text-lg leading-relaxed">
               Tire suas dúvidas sobre o saque do FGTS por doença grave com quem entende do
               assunto. O primeiro passo é uma conversa — sem burocracia, pelo WhatsApp.
