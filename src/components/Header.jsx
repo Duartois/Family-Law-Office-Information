@@ -13,7 +13,7 @@ export default function Header() {
       </header>
 
       <div className="faixa-frase bg-forest">
-        <p className="text-ocre text-right font-medium leading-snug text-[0.95rem] sm:text-base">
+        <p className="text-ocre text-right font-medium leading-snug text-[0.95rem] sm:text-base md:text-xl">
           Está precisando de um advogado?
           <br />
           Conte com a {SITE.name}

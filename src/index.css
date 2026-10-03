@@ -58,6 +58,13 @@ body {
 .tela-inicial > .faixa-livro { flex: 4.3 1 0; min-height: 0; position: relative; overflow: hidden; }
 .tela-inicial > .bloco-destaque { flex: 4 1 0; }
 
+/* Telas largas: a faixa da frase encolhe e a foto ganha espaço para não virar um fio. */
+@media (min-width: 1024px) {
+  .tela-inicial > .faixa-frase { flex-grow: 1; }
+  .tela-inicial > .faixa-livro { flex-grow: 6; }
+  .tela-inicial > .bloco-destaque { flex-grow: 3.6; }
+}
+
 /* Linha fina dourada sob os títulos de seção: atravessa o container de lado a lado. */
 .linha-titulo {
   display: block;

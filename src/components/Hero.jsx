@@ -6,7 +6,7 @@ export default function Hero() {
       <img
         src={bannerImg}
         alt="Livro aberto sobre uma mesa, com uma biblioteca desfocada ao fundo"
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className="absolute inset-0 w-full h-full object-cover object-[50%_55%]"
       />
     </section>
   );

@@ -6,7 +6,7 @@ export default function LawyersBar() {
     <section className="bloco-destaque bg-forest text-white px-4 py-4 flex flex-col justify-center">
       <div className="grid grid-cols-2 gap-x-3 sm:gap-x-5 items-stretch w-full max-w-md md:max-w-xl mx-auto">
         <div className="flex flex-col justify-between text-right">
-          <p className="font-semibold leading-snug text-[clamp(0.85rem,4.1vw,1.05rem)] md:text-xl">
+          <p className="font-semibold leading-snug text-[clamp(0.85rem,4.1vw,1.05rem)] md:text-lg">
             Especialista
             <br />
             em direito
@@ -18,7 +18,7 @@ export default function LawyersBar() {
           </p>
         </div>
 
-        <p className="font-display uppercase leading-[1.05] text-[clamp(1.9rem,9vw,2.6rem)] md:text-6xl">
+        <p className="font-display uppercase leading-[1.05] text-[clamp(1.9rem,9vw,2.6rem)] md:text-[clamp(2.6rem,7.5vh,3.6rem)]">
           <span className="block">{SITE.yearsOfExperience} anos</span>
           <span className="block">de</span>
           <span className="block">experiência</span>
