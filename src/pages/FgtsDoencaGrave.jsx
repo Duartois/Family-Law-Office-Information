@@ -89,12 +89,12 @@ export default function FgtsDoencaGrave() {
       <Header />
 
       <main className="bg-white text-gray-800">
-        <section className="bg-forest text-white py-14 px-4">
+        <section className="bg-navy text-white py-14 px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-display uppercase text-3xl md:text-5xl tracking-wide leading-tight">
               Saque do FGTS por doença grave: quem tem direito e como pedir
             </h1>
-            <div className="w-16 h-[3px] bg-ocre mx-auto mt-4" />
+            <div className="linha-titulo" />
             <p className="mt-6 text-lg leading-relaxed">
               Receber o diagnóstico de uma doença grave já é difícil o suficiente — cuidar da
               parte burocrática não precisa ser. Se você ou um dependente enfrenta uma doença
@@ -112,7 +112,7 @@ export default function FgtsDoencaGrave() {
         <section className="py-14 px-4">
           <div className="max-w-3xl mx-auto space-y-10">
             <div>
-              <SectionHeading title="Quem pode sacar" color="forest" align="left" />
+              <SectionHeading title="Quem pode sacar" color="navy" align="left" />
               <p className="mt-4 leading-relaxed">
                 O saque do FGTS por doença grave pode ser solicitado em duas situações: quando o
                 próprio trabalhador titular da conta é diagnosticado com uma das doenças
@@ -123,7 +123,7 @@ export default function FgtsDoencaGrave() {
             </div>
 
             <div>
-              <SectionHeading title="Quais doenças dão direito" color="forest" align="left" />
+              <SectionHeading title="Quais doenças dão direito" color="navy" align="left" />
               <p className="mt-4 leading-relaxed">
                 A Lei 8.036/90, em seu art. 20, prevê expressamente o saque do FGTS nos casos de
                 AIDS (HIV), neoplasia maligna (câncer) e estágio terminal em razão de doença
@@ -136,7 +136,7 @@ export default function FgtsDoencaGrave() {
             </div>
 
             <div>
-              <SectionHeading title="O que fazer se a Caixa negar" color="forest" align="left" />
+              <SectionHeading title="O que fazer se a Caixa negar" color="navy" align="left" />
               <p className="mt-4 leading-relaxed">
                 É comum que pedidos administrativos de saque sejam negados pela Caixa Econômica
                 Federal, mesmo em casos que reúnem boa documentação médica. Quando isso acontece,
@@ -146,7 +146,7 @@ export default function FgtsDoencaGrave() {
             </div>
 
             <div>
-              <SectionHeading title="Documentos necessários" color="forest" align="left" />
+              <SectionHeading title="Documentos necessários" color="navy" align="left" />
               <ul className="mt-4 space-y-4">
                 {DOCUMENTS.map(({ Icon, label }) => (
                   <li key={label} className="flex items-start gap-3">
@@ -158,7 +158,7 @@ export default function FgtsDoencaGrave() {
             </div>
 
             <div>
-              <SectionHeading title="Como funciona a ação judicial" color="forest" align="left" />
+              <SectionHeading title="Como funciona a ação judicial" color="navy" align="left" />
               <p className="mt-4 leading-relaxed">
                 Quando o pedido administrativo não é suficiente, a ação judicial busca demonstrar
                 ao juiz, por meio de laudos médicos e demais provas, que a doença se enquadra nas
@@ -179,19 +179,19 @@ export default function FgtsDoencaGrave() {
 
         <section className="bg-section-bg py-14 px-4 border-t border-gray-200">
           <div className="max-w-3xl mx-auto">
-            <SectionHeading title="Perguntas Frequentes" color="forest" />
+            <SectionHeading title="Perguntas Frequentes" color="navy" />
             <div className="mt-10">
               <FaqAccordion items={FAQ_ITEMS} />
             </div>
           </div>
         </section>
 
-        <section className="bg-forest text-white py-14 px-4">
+        <section className="bg-navy text-white py-14 px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="font-display uppercase text-3xl md:text-4xl tracking-wide">
               Fale com {SITE.lawyers.map((l) => l.name).join(' e ')}
             </h2>
-            <div className="w-16 h-[3px] bg-ocre mx-auto mt-4" />
+            <div className="linha-titulo" />
             <p className="mt-6 text-lg leading-relaxed">
               Tire suas dúvidas sobre o saque do FGTS por doença grave com quem entende do
               assunto. O primeiro passo é uma conversa — sem burocracia, pelo WhatsApp.

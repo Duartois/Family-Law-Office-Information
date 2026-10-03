@@ -36,9 +36,11 @@ export default function Home() {
         path="/"
         jsonLd={LEGAL_SERVICE_JSON_LD}
       />
-      <Header />
-      <Hero />
-      <LawyersBar />
+      <div className="tela-inicial">
+        <Header />
+        <Hero />
+        <LawyersBar />
+      </div>
       <Services />
       <ServicesSecondary />
       <About />

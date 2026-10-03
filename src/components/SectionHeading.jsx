@@ -1,22 +1,17 @@
 const COLORS = {
   white: 'text-white',
   bordo: 'text-bordo',
-  forest: 'text-forest',
-};
-
-const UNDERLINE_ALIGN = {
-  center: 'mx-auto',
-  left: 'mr-auto',
+  navy: 'text-navy',
 };
 
 /**
  * Título de seção padrão do site: texto em caixa alta na fonte condensada,
- * com uma linha fina ocre embaixo (regra visual usada em toda a página).
+ * com uma linha fina dourada de ponta a ponta embaixo (classe .linha-titulo).
  */
 export default function SectionHeading({
   title,
   subtitle,
-  color = 'forest',
+  color = 'navy',
   align = 'center',
   className = '',
 }) {
@@ -27,7 +22,7 @@ export default function SectionHeading({
       <h2 className={`font-display uppercase text-3xl md:text-4xl tracking-wide ${COLORS[color]}`}>
         {title}
       </h2>
-      <div className={`w-16 h-[3px] bg-ocre mt-3 ${UNDERLINE_ALIGN[align]}`} />
+      <div className="linha-titulo" />
       {subtitle && (
         <p className="text-ocre mt-3 text-base md:text-lg">{subtitle}</p>
       )}

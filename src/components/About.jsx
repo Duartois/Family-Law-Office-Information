@@ -6,7 +6,7 @@ export default function About() {
   const [lawyer1, lawyer2] = SITE.lawyers;
 
   return (
-    <section id="sobre" className="bg-forest text-white py-14 px-4">
+    <section id="sobre" className="bg-navy text-white py-14 px-4">
       <div className="max-w-3xl mx-auto">
         <SectionHeading title="Sobre o Escritório" color="white" />
 
@@ -20,7 +20,7 @@ export default function About() {
 
         <p className="mt-6 text-lg leading-relaxed text-center">
           Para elas, atuar com o Direito de Família é um sacerdócio, pois, mais do que
-          conhecimentos técnicos, é preciso ter habilidade e sensibilidade para ora
+          conhecimentos técnicos, é preciso ter habilidade e sensibilidade para, ora
           conscientizar aqueles que pensam em destruir, ora encorajar aqueles que se sentem
           destruídos.
         </p>

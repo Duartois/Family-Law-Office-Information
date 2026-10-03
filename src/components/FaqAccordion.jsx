@@ -15,7 +15,7 @@ export default function FaqAccordion({ items }) {
               aria-expanded={isOpen}
               className="w-full flex items-center justify-between gap-4 p-4 md:p-5 text-left bg-white hover:bg-gray-50"
             >
-              <span className="font-medium text-forest">{item.question}</span>
+              <span className="font-medium text-navy">{item.question}</span>
               <span className="text-ocre text-xl leading-none flex-shrink-0">{isOpen ? '−' : '+'}</span>
             </button>
             {isOpen && (
