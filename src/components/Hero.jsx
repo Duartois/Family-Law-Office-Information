@@ -5,8 +5,8 @@ export default function Hero() {
     <section aria-label="Banner" className="faixa-livro bg-forest">
       <img
         src={bannerImg}
-        alt="Livro aberto sobre uma mesa, com uma biblioteca desfocada ao fundo"
-        className="absolute inset-0 w-full h-full object-cover object-[50%_55%]"
+        alt="Livro antigo aberto sobre uma mesa escura, com uma biblioteca desfocada ao fundo"
+        className="absolute inset-0 w-full h-full object-cover object-[50%_70%]"
       />
     </section>
   );
