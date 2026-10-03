@@ -32,11 +32,6 @@ export default function HowItWorks() {
               extrajudicial ou judicial.
             </p>
           </div>
-
-          <p className="text-ocre font-medium text-center text-lg">
-            E, para uma MAIOR COMODIDADE, mensalmente você recebe no seu WhatsApp informações
-            sobre o andamento do seu caso.
-          </p>
         </div>
       </div>
     </section>
