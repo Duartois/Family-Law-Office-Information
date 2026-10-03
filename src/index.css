@@ -34,6 +34,30 @@ body {
   width: 100%;
 }
 
+/* Primeira tela: ocupa exatamente a altura da tela do celular, sem deixar aparecer a
+   próxima seção. Alturas proporcionais (flex), sem px fixos; svh = altura "pequena"
+   do viewport (estável mesmo com a barra do navegador visível), vh como fallback. */
+.tela-inicial {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100svh;
+  min-height: 30rem; /* só protege celular deitado / janelas muito baixas */
+}
+
+/* Faixa da frase dourada (também usada fora da primeira tela, ex.: página do FGTS). */
+.faixa-frase {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.25rem 1rem;
+}
+
+.tela-inicial > .faixa-logo { flex: 0 0 auto; }
+.tela-inicial > .faixa-frase { flex: 2 1 0; padding-block: 0.5rem; }
+.tela-inicial > .faixa-livro { flex: 4.3 1 0; min-height: 0; position: relative; overflow: hidden; }
+.tela-inicial > .bloco-destaque { flex: 4 1 0; }
+
 /* Linha fina dourada sob os títulos de seção: atravessa o container de lado a lado. */
 .linha-titulo {
   display: block;

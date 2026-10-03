@@ -3,7 +3,7 @@ import { SITE, WHATSAPP_MESSAGES } from '../config/site';
 
 export default function LawyersBar() {
   return (
-    <section className="bg-forest text-white py-10 px-4">
+    <section className="bloco-destaque bg-forest text-white px-4 py-4 flex flex-col justify-center">
       <div className="max-w-5xl mx-auto flex flex-col gap-8 md:flex-row md:items-center md:justify-between text-center md:text-left">
         <div>
           <p className="text-xl md:text-2xl font-semibold">Especialista em direito de família</p>

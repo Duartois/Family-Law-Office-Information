@@ -2,11 +2,11 @@ import bannerImg from '../assets/banner-livro.webp';
 
 export default function Hero() {
   return (
-    <section aria-label="Banner">
+    <section aria-label="Banner" className="faixa-livro bg-forest">
       <img
         src={bannerImg}
         alt="Livro aberto sobre uma mesa, com uma biblioteca desfocada ao fundo"
-        className="w-full h-[32vh] sm:h-[42vh] md:h-[52vh] object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-center"
       />
     </section>
   );
