@@ -8,7 +8,7 @@ export default function InPersonSection() {
       <div className="max-w-3xl mx-auto text-center">
         <SectionHeading
           title="Atendimentos Presenciais"
-          subtitle="Caso seja da sua preferência"
+          subtitle="caso seja da sua preferência"
           color="white"
         />
 
