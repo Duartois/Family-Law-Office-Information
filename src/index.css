@@ -1,14 +1,23 @@
 @import "tailwindcss";
 
-/* Paleta e fontes únicas do site: qualquer alteração é feita apenas aqui. */
-@theme {
-  --color-forest: #0F2A22;
-  --color-forest-dark: #0A1D17;
-  --color-ocre: #C9A227;
-  --color-bordo: #B22222;
-  --color-section-bg: #EEF0F2;
-  --color-whatsapp: #25D366;
-  --color-whatsapp-dark: #1ebe57;
+/* Cores do site: fonte única. Para trocar uma cor, altere só aqui. */
+:root {
+  --verde-escuro: #0F2A22; /* fundo das seções e do bloco "Especialista em direito de família" */
+  --dourado: #C9A227; /* destaques, subtítulos e linhas divisórias */
+  --verde-botao: #25D366; /* botões de WhatsApp */
+  --verde-botao-hover: #1ebe57;
+  --bordo: #B22222;
+  --cinza-claro: #EEF0F2;
+}
+
+/* Os nomes em inglês abaixo viram as classes do Tailwind (bg-forest, text-ocre...). */
+@theme inline {
+  --color-forest: var(--verde-escuro);
+  --color-ocre: var(--dourado);
+  --color-whatsapp: var(--verde-botao);
+  --color-whatsapp-dark: var(--verde-botao-hover);
+  --color-bordo: var(--bordo);
+  --color-section-bg: var(--cinza-claro);
 }
 
 html {
