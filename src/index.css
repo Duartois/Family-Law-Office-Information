@@ -2,7 +2,7 @@
 
 /* Cores do site: fonte única. Para trocar uma cor, altere só aqui. */
 :root {
-  --verde-escuro: #0F2A22; /* fundo das seções e do bloco "Especialista em direito de família" */
+  --azul-marinho: #0F2A22; /* fundo das seções e do bloco "Especialista em direito de família" */
   --dourado: #C9A227; /* destaques, subtítulos e linhas divisórias */
   --verde-botao: #25D366; /* botões de WhatsApp */
   --verde-botao-hover: #1ebe57;
@@ -10,9 +10,9 @@
   --cinza-claro: #EEF0F2;
 }
 
-/* Os nomes em inglês abaixo viram as classes do Tailwind (bg-forest, text-ocre...). */
+/* Os nomes em inglês abaixo viram as classes do Tailwind (bg-navy, text-ocre...). */
 @theme inline {
-  --color-forest: var(--verde-escuro);
+  --color-navy: var(--azul-marinho);
   --color-ocre: var(--dourado);
   --color-whatsapp: var(--verde-botao);
   --color-whatsapp-dark: var(--verde-botao-hover);

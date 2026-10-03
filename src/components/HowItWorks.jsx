@@ -3,7 +3,7 @@ import MonitorHeadsetIcon from './icons/MonitorHeadsetIcon';
 
 export default function HowItWorks() {
   return (
-    <section id="como-funciona" className="bg-forest py-14 px-4">
+    <section id="como-funciona" className="bg-navy py-14 px-4">
       <div className="max-w-2xl mx-auto">
         <SectionHeading
           title="Entre em Contato Agora"

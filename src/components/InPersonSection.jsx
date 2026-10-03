@@ -4,7 +4,7 @@ import { WHATSAPP_MESSAGES } from '../config/site';
 
 export default function InPersonSection() {
   return (
-    <section className="bg-forest py-14 px-4">
+    <section className="bg-navy py-14 px-4">
       <div className="max-w-3xl mx-auto text-center">
         <SectionHeading
           title="Atendimentos Presenciais"

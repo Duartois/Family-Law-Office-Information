@@ -15,7 +15,7 @@ const ACTIONS = [
 
 export default function ServicesSecondary() {
   return (
-    <section className="bg-forest py-14 px-4">
+    <section className="bg-navy py-14 px-4">
       <div className="max-w-5xl mx-auto">
         <SectionHeading title="Atuamos Também Em" subtitle="como podemos te ajudar?" color="white" />
 

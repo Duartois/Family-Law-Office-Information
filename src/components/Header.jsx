@@ -6,13 +6,13 @@ export default function Header() {
     <>
       <header className="faixa-logo bg-white px-4 py-3 border-b border-gray-200">
         <div className="max-w-5xl mx-auto">
-          <Link to="/" className="font-display text-2xl md:text-3xl uppercase tracking-wide text-forest">
+          <Link to="/" className="font-display text-2xl md:text-3xl uppercase tracking-wide text-navy">
             {SITE.name}
           </Link>
         </div>
       </header>
 
-      <div className="faixa-frase bg-forest">
+      <div className="faixa-frase bg-navy">
         <p className="text-ocre text-right font-medium leading-snug text-[0.95rem] sm:text-base md:text-xl">
           Está precisando de um advogado?
           <br />

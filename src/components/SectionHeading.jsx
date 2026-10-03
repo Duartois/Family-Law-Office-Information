@@ -1,7 +1,7 @@
 const COLORS = {
   white: 'text-white',
   bordo: 'text-bordo',
-  forest: 'text-forest',
+  navy: 'text-navy',
 };
 
 /**
@@ -11,7 +11,7 @@ const COLORS = {
 export default function SectionHeading({
   title,
   subtitle,
-  color = 'forest',
+  color = 'navy',
   align = 'center',
   className = '',
 }) {

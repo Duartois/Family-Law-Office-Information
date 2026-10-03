@@ -5,7 +5,7 @@ import { SITE, buildWhatsAppLink, WHATSAPP_MESSAGES } from '../config/site';
 
 export default function Contact() {
   return (
-    <section id="contato" className="bg-forest py-14 px-4">
+    <section id="contato" className="bg-navy py-14 px-4">
       <div className="max-w-2xl mx-auto">
         <SectionHeading title="Informações de Contato" color="white" />
 
