@@ -54,8 +54,8 @@ body {
 }
 
 .tela-inicial > .faixa-logo { flex: 0 0 auto; }
-.tela-inicial > .faixa-frase { flex: 2 1 0; padding-block: 0.5rem; }
-.tela-inicial > .faixa-livro { flex: 4.3 1 0; min-height: 0; position: relative; overflow: hidden; }
+.tela-inicial > .faixa-frase { flex: 2.1 1 0; padding-block: 0.5rem; }
+.tela-inicial > .faixa-livro { flex: 3.2 1 0; min-height: 0; position: relative; overflow: hidden; }
 .tela-inicial > .bloco-destaque { flex: 4 1 0; }
 
 /* Telas largas: a faixa da frase encolhe e a foto ganha espaço para não virar um fio. */
