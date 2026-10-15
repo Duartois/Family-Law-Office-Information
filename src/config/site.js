@@ -26,6 +26,6 @@ export function buildWhatsAppLink(message) {
 // Mensagem padrão única, conforme solicitado: todos os botões da home usam a
 // mesma mensagem. A página do FGTS tem sua própria mensagem de contexto.
 export const WHATSAPP_MESSAGES = {
-  geral: 'Olá! Vim pelo site e gostaria de agendar uma consulta.',
+  geral: 'Olá, vim pelo site e gostaria de obter atendimento',
   fgts: 'Olá! Vim pela página do FGTS por doença grave e gostaria de saber se tenho direito.',
 };
