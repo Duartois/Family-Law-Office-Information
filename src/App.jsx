@@ -2,16 +2,16 @@ import { Routes, Route } from 'react-router-dom'
 import './index.css'
 import ScrollToTop from './components/ScrollToTop'
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton'
-import Home from './pages/Home'
-import FgtsDoencaGrave from './pages/FgtsDoencaGrave'
+import { routes } from './routes'
 
 function App() {
   return (
     <div className="min-h-screen">
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/saque-fgts-doenca-grave" element={<FgtsDoencaGrave />} />
+        {routes.map(({ path, element }) => (
+          <Route key={path} path={path} element={element} />
+        ))}
       </Routes>
       <WhatsAppFloatingButton />
     </div>

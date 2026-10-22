@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import ReviewMarker from './ReviewMarker';
 
-export default function FaqAccordion({ items }) {
+export default function FaqAccordion({ items, markReview = false }) {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
@@ -20,6 +21,7 @@ export default function FaqAccordion({ items }) {
             </button>
             {isOpen && (
               <div className="px-4 md:px-5 pb-4 md:pb-5 text-gray-700 leading-relaxed">
+                {markReview && <ReviewMarker />}
                 {item.answer}
               </div>
             )}

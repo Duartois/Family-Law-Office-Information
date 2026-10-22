@@ -18,10 +18,19 @@ export const SITE = {
   },
   // Domínio oficial, sem barra final. Usado por Seo.jsx, sitemap.xml e robots.txt.
   siteUrl: 'https://www.coppieduarte.com.br',
+  // Mostra a etiqueta [REVISAR] nos textos novos que aguardam a aprovação das advogadas.
+  // Passe para false quando eles forem aprovados.
+  showReviewMarkers: true,
 };
 
 export function isPlaceholder(value) {
   return /\[PREENCHER/i.test(String(value ?? ''));
+}
+
+/** Texto alternativo da foto das sócias (usado em todas as páginas que a exibem). */
+export function sociasPhotoAlt() {
+  const names = SITE.lawyers.map((l) => l.name).join(' e ');
+  return `As advogadas ${names}, sócias do escritório, vestidas de preto, em pé ao lado de uma poltrona cinza`;
 }
 
 export function absoluteUrl(path = '/') {
@@ -38,4 +47,5 @@ export function buildWhatsAppLink(message) {
 export const WHATSAPP_MESSAGES = {
   geral: 'Olá, vim pelo site e gostaria de obter atendimento',
   fgts: 'Olá! Vim pela página do FGTS por doença grave e gostaria de saber se tenho direito.',
+  area: (areaName) => `Olá, vim pela página sobre ${areaName} e gostaria de obter atendimento`,
 };

@@ -2,6 +2,7 @@ import Seo from '../components/Seo';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import LawyersBar from '../components/LawyersBar';
+import HomeIntro from '../components/HomeIntro';
 import Services from '../components/Services';
 import ServicesSecondary from '../components/ServicesSecondary';
 import About from '../components/About';
@@ -26,6 +27,7 @@ export default function Home() {
         <Hero />
         <LawyersBar />
       </div>
+      <HomeIntro />
       <Services />
       <ServicesSecondary />
       <About />

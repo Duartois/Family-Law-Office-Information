@@ -4,10 +4,10 @@ import Header from '../components/Header';
 import WhatsAppCTA from '../components/WhatsAppCTA';
 import SectionHeading from '../components/SectionHeading';
 import FaqAccordion from '../components/FaqAccordion';
+import LawyersCallout from '../components/LawyersCallout';
 import Contact from '../components/Contact';
-import { SITE, WHATSAPP_MESSAGES } from '../config/site';
+import { WHATSAPP_MESSAGES } from '../config/site';
 import { buildLegalService, buildFaqPage } from '../seo/jsonld';
-import sociasImg from '../assets/socias.webp';
 
 const DOCUMENTS = [
   { Icon: FileText, label: 'Documento de identidade e CPF' },
@@ -161,33 +161,11 @@ export default function FgtsDoencaGrave() {
           </div>
         </section>
 
-        <section className="bg-navy text-white py-14 px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-display uppercase text-3xl md:text-4xl tracking-wide">
-              Fale com {SITE.lawyers.map((l) => l.name).join(' e ')}
-            </h2>
-            <div className="linha-titulo" />
-            <p className="mt-6 text-lg leading-relaxed">
-              Tire suas dúvidas sobre o saque do FGTS por doença grave com quem entende do
-              assunto. O primeiro passo é uma conversa — sem burocracia, pelo WhatsApp.
-            </p>
-            <div className="mt-8 flex justify-center">
-              <img
-                src={sociasImg}
-                alt={`As advogadas ${SITE.lawyers.map((l) => l.name).join(' e ')}, sócias da ${SITE.name}`}
-                className="w-full max-w-xs border-4 border-white rounded-sm object-cover"
-              />
-            </div>
-            <div className="mt-8 flex justify-center">
-              <WhatsAppCTA message={WHATSAPP_MESSAGES.fgts} size="lg">
-                Tire suas dúvidas pelo WhatsApp
-              </WhatsAppCTA>
-            </div>
-            <p className="mt-6 text-sm text-gray-300">
-              {SITE.lawyers.map((l) => `${l.name} — ${l.oab}`).join(' · ')}
-            </p>
-          </div>
-        </section>
+        <LawyersCallout
+          message={WHATSAPP_MESSAGES.fgts}
+          ctaLabel="Tire suas dúvidas pelo WhatsApp"
+          text="Tire suas dúvidas sobre o saque do FGTS por doença grave com quem entende do assunto. O primeiro passo é uma conversa — sem burocracia, pelo WhatsApp."
+        />
       </main>
 
       <Contact />
