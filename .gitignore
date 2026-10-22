@@ -25,3 +25,8 @@ dist-ssr
 
 # Wrangler (cache local)
 .wrangler
+
+# Variáveis de ambiente locais (o .env.example fica no repositório)
+.env
+.env.*
+!.env.example
