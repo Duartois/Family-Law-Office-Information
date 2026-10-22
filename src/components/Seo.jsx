@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { absoluteUrl } from '../config/site';
+import { HeadContext } from '../seo/HeadContext';
 
 function setMeta(attr, key, content) {
   if (!content) return;
@@ -36,12 +37,19 @@ function setJsonLd(id, data) {
 
 /**
  * Componente sem visual: ajusta title/description/OG/canonical da página
- * atual e injeta dados estruturados (schema.org) opcionais. Necessário
- * porque o site é uma SPA sem servidor de metadados por rota.
+ * atual e injeta dados estruturados (schema.org) opcionais.
+ *
+ * No build, a pré-renderização lê estas mesmas props (via HeadContext) e grava
+ * as tags direto no HTML de cada página; no navegador, o efeito abaixo mantém
+ * as tags certas durante a navegação entre páginas.
  */
-export default function Seo({ title, description, path, jsonLd }) {
+export default function Seo({ title, description, path, jsonLd, noindex = false }) {
+  const registerForPrerender = useContext(HeadContext);
+  if (registerForPrerender) registerForPrerender({ title, description, path, jsonLd, noindex });
+
   useEffect(() => {
     if (title) document.title = title;
+    setMeta('name', 'robots', noindex ? 'noindex, nofollow' : 'index, follow');
     setMeta('name', 'description', description);
     setMeta('property', 'og:title', title);
     setMeta('property', 'og:description', description);
@@ -59,7 +67,7 @@ export default function Seo({ title, description, path, jsonLd }) {
       });
     }
     return () => cleanups.forEach((fn) => fn());
-  }, [title, description, path, jsonLd]);
+  }, [title, description, path, jsonLd, noindex]);
 
   return null;
 }

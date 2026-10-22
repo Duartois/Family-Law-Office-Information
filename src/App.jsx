@@ -3,6 +3,7 @@ import './index.css'
 import ScrollToTop from './components/ScrollToTop'
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton'
 import { routes } from './routes'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         {routes.map(({ path, element }) => (
           <Route key={path} path={path} element={element} />
         ))}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <WhatsAppFloatingButton />
     </div>

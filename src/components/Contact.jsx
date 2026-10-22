@@ -53,7 +53,9 @@ export default function Contact() {
         <p>
           {SITE.lawyers.map((l) => `${l.name} — ${l.oab}`).join(' · ')}
         </p>
-        <p>&copy; {new Date().getFullYear()} {SITE.fullName}. Todos os direitos reservados.</p>
+        <p suppressHydrationWarning>
+          &copy; {new Date().getFullYear()} {SITE.fullName}. Todos os direitos reservados.
+        </p>
       </div>
     </section>
   );

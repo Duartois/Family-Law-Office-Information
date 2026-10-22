@@ -1,0 +1,14 @@
+{
+  // Worker que já existe na conta Cloudflare: o nome precisa ser exatamente este, senão o
+  // `wrangler deploy` cria um Worker novo e o domínio continua apontando para o antigo.
+  "name": "family-law-office-information",
+  "compatibility_date": "2026-10-22",
+  "assets": {
+    // Gerado por `npm run build` (uma página HTML por rota + 404.html).
+    "directory": "./dist",
+    // URL inexistente devolve dist/404.html com status 404 (antes: index.html com 200).
+    "not_found_handling": "404-page",
+    // pagina.html é servido em /pagina, sem barra final (igual ao canonical e ao sitemap).
+    "html_handling": "auto-trailing-slash"
+  }
+}
