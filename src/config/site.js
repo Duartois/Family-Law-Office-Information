@@ -1,22 +1,32 @@
 // Fonte única de verdade para os dados de contato e identidade do escritório.
+// Dados que ainda faltam ficam como [PREENCHER: ...]; use isPlaceholder() para
+// não tratá-los como dado real (ex.: mailto:, dados estruturados).
 export const SITE = {
   name: 'Coppí & Duarte',
   fullName: 'Coppí & Duarte Advogadas Associadas',
   whatsappNumber: '5511987679957',
   whatsappDisplay: '(11) 98767-9957',
-  // TODO: substituir pelo e-mail oficial do escritório quando for criado.
-  email: 'matheusdugoncalves@gmail.com',
+  email: '[PREENCHER: e-mail oficial do escritório]',
   yearsOfExperience: '27',
   lawyers: [
-    { name: 'Paula Coppi', oab: 'OAB/SP nº [preencher]' },
-    { name: 'Viviane Duarte', oab: 'OAB/SP nº [preencher]' },
+    { name: 'Paula Coppi', oab: 'OAB/SP nº [PREENCHER: OAB de Paula Coppi]' },
+    { name: 'Viviane Duarte', oab: 'OAB/SP nº 201.298' },
   ],
   address: {
     street: 'Av. Paulista, nº 1.439, 1º andar, Cj. 12',
     district: 'Bela Vista - CEP 01311-200, São Paulo/SP',
   },
-  siteUrl: 'https://www.coppieduarte.com.br', // TODO: confirmar domínio definitivo
+  // Domínio oficial, sem barra final. Usado por Seo.jsx, sitemap.xml e robots.txt.
+  siteUrl: 'https://www.coppieduarte.com.br',
 };
+
+export function isPlaceholder(value) {
+  return /\[PREENCHER/i.test(String(value ?? ''));
+}
+
+export function absoluteUrl(path = '/') {
+  return `${SITE.siteUrl}${path}`;
+}
 
 export function buildWhatsAppLink(message) {
   const base = `https://wa.me/${SITE.whatsappNumber}`;

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { absoluteUrl } from '../config/site';
 
 function setMeta(attr, key, content) {
   if (!content) return;
@@ -45,7 +46,7 @@ export default function Seo({ title, description, path, jsonLd }) {
     setMeta('property', 'og:title', title);
     setMeta('property', 'og:description', description);
     if (path) {
-      const url = `https://www.coppieduarte.com.br${path}`;
+      const url = absoluteUrl(path);
       setMeta('property', 'og:url', url);
       setLink('canonical', url);
     }

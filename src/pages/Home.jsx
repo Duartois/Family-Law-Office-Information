@@ -8,24 +8,9 @@ import About from '../components/About';
 import HowItWorks from '../components/HowItWorks';
 import InPersonSection from '../components/InPersonSection';
 import Contact from '../components/Contact';
-import { SITE } from '../config/site';
+import { buildLegalService } from '../seo/jsonld';
 
-const LEGAL_SERVICE_JSON_LD = {
-  '@context': 'https://schema.org',
-  '@type': 'LegalService',
-  name: SITE.fullName,
-  email: SITE.email,
-  telephone: `+${SITE.whatsappNumber}`,
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: SITE.address.street,
-    addressLocality: 'São Paulo',
-    addressRegion: 'SP',
-    addressCountry: 'BR',
-  },
-  areaServed: 'BR',
-  url: SITE.siteUrl,
-};
+const LEGAL_SERVICE_JSON_LD = buildLegalService('/');
 
 export default function Home() {
   return (

@@ -6,6 +6,7 @@ import SectionHeading from '../components/SectionHeading';
 import FaqAccordion from '../components/FaqAccordion';
 import Contact from '../components/Contact';
 import { SITE, WHATSAPP_MESSAGES } from '../config/site';
+import { buildLegalService, buildFaqPage } from '../seo/jsonld';
 import sociasImg from '../assets/socias.webp';
 
 const DOCUMENTS = [
@@ -48,34 +49,8 @@ const FAQ_ITEMS = [
   },
 ];
 
-const LEGAL_SERVICE_JSON_LD = {
-  '@context': 'https://schema.org',
-  '@type': 'LegalService',
-  name: SITE.fullName,
-  email: SITE.email,
-  telephone: `+${SITE.whatsappNumber}`,
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: SITE.address.street,
-    addressLocality: 'São Paulo',
-    addressRegion: 'SP',
-    addressCountry: 'BR',
-  },
-  url: `${SITE.siteUrl}/saque-fgts-doenca-grave`,
-};
-
-const FAQ_JSON_LD = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: FAQ_ITEMS.map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: item.answer,
-    },
-  })),
-};
+const LEGAL_SERVICE_JSON_LD = buildLegalService('/saque-fgts-doenca-grave');
+const FAQ_JSON_LD = buildFaqPage(FAQ_ITEMS);
 
 export default function FgtsDoencaGrave() {
   return (
