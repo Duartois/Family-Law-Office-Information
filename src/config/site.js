@@ -1,12 +1,13 @@
 // Fonte única de verdade para os dados de contato e identidade do escritório.
-// Dados que ainda faltam ficam como [PREENCHER: ...]; use isPlaceholder() para
-// não tratá-los como dado real (ex.: mailto:, dados estruturados).
+// Dado que ainda não existe fica vazio (com um TODO) e some da tela; nunca texto provisório.
+// O build falha se algum marcador [PREENCHER] ou [REVISAR] chegar ao HTML (scripts/prerender.mjs).
 export const SITE = {
   name: 'Coppí & Duarte',
   fullName: 'Coppí & Duarte Advogadas Associadas',
   whatsappNumber: '5511987679957',
   whatsappDisplay: '(11) 98767-9957',
-  email: '[PREENCHER: e-mail oficial do escritório]',
+  // TODO: e-mail oficial do escritório. Vazio = não aparece no rodapé nem nos dados estruturados.
+  email: '',
   yearsOfExperience: '27',
   lawyers: [
     { name: 'Paula Coppi', oab: 'OAB/SP nº 179.424' },
@@ -18,14 +19,7 @@ export const SITE = {
   },
   // Domínio oficial, sem barra final. Usado por Seo.jsx, sitemap.xml e robots.txt.
   siteUrl: 'https://www.coppiduarteadvocacia.com.br',
-  // Mostra a etiqueta [REVISAR] nos textos novos que aguardam a aprovação das advogadas.
-  // Passe para false quando eles forem aprovados.
-  showReviewMarkers: true,
 };
-
-export function isPlaceholder(value) {
-  return /\[PREENCHER/i.test(String(value ?? ''));
-}
 
 /** Texto alternativo da foto das sócias (usado em todas as páginas que a exibem). */
 export function sociasPhotoAlt() {
