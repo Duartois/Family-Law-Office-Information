@@ -9,7 +9,7 @@ export const SITE = {
   email: '[PREENCHER: e-mail oficial do escritório]',
   yearsOfExperience: '27',
   lawyers: [
-    { name: 'Paula Coppi', oab: 'OAB/SP nº [PREENCHER: OAB de Paula Coppi]' },
+    { name: 'Paula Coppi', oab: 'OAB/SP nº 179.424' },
     { name: 'Viviane Duarte', oab: 'OAB/SP nº 201.298' },
   ],
   address: {
