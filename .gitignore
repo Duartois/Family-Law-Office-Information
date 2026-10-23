@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Wrangler (cache local)
+.wrangler
+
+# Variáveis de ambiente locais (o .env.example fica no repositório)
+.env
+.env.*
+!.env.example

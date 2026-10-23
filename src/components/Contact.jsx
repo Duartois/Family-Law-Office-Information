@@ -1,7 +1,7 @@
 import { Mail, MapPin } from 'lucide-react';
 import SectionHeading from './SectionHeading';
 import WhatsAppIcon from './icons/WhatsAppIcon';
-import { SITE, buildWhatsAppLink, WHATSAPP_MESSAGES } from '../config/site';
+import { SITE, buildWhatsAppLink, isPlaceholder, WHATSAPP_MESSAGES } from '../config/site';
 
 export default function Contact() {
   return (
@@ -14,9 +14,13 @@ export default function Contact() {
             <Mail className="text-ocre flex-shrink-0 w-6 h-6 md:w-7 md:h-7" />
             <div>
               <h4 className="text-xs uppercase tracking-wide text-white/60 mb-1">E-mail</h4>
-              <a href={`mailto:${SITE.email}`} className="text-white font-medium break-all">
-                {SITE.email}
-              </a>
+              {isPlaceholder(SITE.email) ? (
+                <span className="text-white font-medium">{SITE.email}</span>
+              ) : (
+                <a href={`mailto:${SITE.email}`} className="text-white font-medium break-all">
+                  {SITE.email}
+                </a>
+              )}
             </div>
           </div>
 
@@ -49,7 +53,9 @@ export default function Contact() {
         <p>
           {SITE.lawyers.map((l) => `${l.name} — ${l.oab}`).join(' · ')}
         </p>
-        <p>&copy; {new Date().getFullYear()} {SITE.fullName}. Todos os direitos reservados.</p>
+        <p suppressHydrationWarning>
+          &copy; {new Date().getFullYear()} {SITE.fullName}. Todos os direitos reservados.
+        </p>
       </div>
     </section>
   );

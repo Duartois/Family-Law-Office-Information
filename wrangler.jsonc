@@ -9,8 +9,11 @@
     "command": "npm run build"
   },
   "assets": {
+    // Gerado por `npm run build` (uma página HTML por rota + 404.html).
     "directory": "./dist",
-    // Site de página única: qualquer caminho devolve index.html (o React Router resolve a rota).
-    "not_found_handling": "single-page-application"
+    // URL inexistente devolve dist/404.html com status 404 (antes: index.html com 200).
+    "not_found_handling": "404-page",
+    // pagina.html é servido em /pagina, sem barra final (igual ao canonical e ao sitemap).
+    "html_handling": "auto-trailing-slash"
   }
 }

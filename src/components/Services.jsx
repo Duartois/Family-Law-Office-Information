@@ -4,13 +4,15 @@ import BrokenHeartIcon from './icons/BrokenHeartIcon';
 import CustodyIcon from './icons/CustodyIcon';
 import SplitHouseIcon from './icons/SplitHouseIcon';
 import PaternityIcon from './icons/PaternityIcon';
+import { AREAS } from '../content/areas';
+import { areaPath } from '../config/paths';
 
-const ACTIONS = [
-  { title: 'Ações de divórcio ou dissolução de união estável', Icon: BrokenHeartIcon },
-  { title: 'Ações de guarda de menores e fixação de alimentos', Icon: CustodyIcon },
-  { title: 'Partilha de bens', Icon: SplitHouseIcon },
-  { title: 'Investigação de paternidade', Icon: PaternityIcon },
-];
+const ICONS = {
+  'divorcio-e-dissolucao-de-uniao-estavel': BrokenHeartIcon,
+  'guarda-de-menores-e-alimentos': CustodyIcon,
+  'partilha-de-bens': SplitHouseIcon,
+  'investigacao-de-paternidade': PaternityIcon,
+};
 
 export default function Services() {
   return (
@@ -19,8 +21,13 @@ export default function Services() {
         <SectionHeading title="Ações em que Atuamos" subtitle="como podemos te ajudar?" color="white" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mt-10">
-          {ACTIONS.map((action) => (
-            <ServiceItem key={action.title} {...action} />
+          {AREAS.map((area) => (
+            <ServiceItem
+              key={area.slug}
+              title={area.cardTitle}
+              Icon={ICONS[area.slug]}
+              to={areaPath(area.slug)}
+            />
           ))}
         </div>
       </div>

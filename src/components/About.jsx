@@ -1,5 +1,5 @@
 import SectionHeading from './SectionHeading';
-import { SITE } from '../config/site';
+import { SITE, sociasPhotoAlt } from '../config/site';
 import sociasImg from '../assets/socias.webp';
 
 export default function About() {
@@ -28,7 +28,7 @@ export default function About() {
         <div className="mt-10 flex justify-center">
           <img
             src={sociasImg}
-            alt={`As advogadas ${lawyer1.name} e ${lawyer2.name}, sócias da ${SITE.name}`}
+            alt={sociasPhotoAlt()}
             className="w-full max-w-xs border-4 border-white rounded-sm object-cover"
           />
         </div>

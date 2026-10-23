@@ -13,15 +13,16 @@ export default function SectionHeading({
   subtitle,
   color = 'navy',
   align = 'center',
+  as: Heading = 'h2',
   className = '',
 }) {
   const alignClass = align === 'center' ? 'text-center' : 'text-left';
 
   return (
     <div className={`${alignClass} ${className}`}>
-      <h2 className={`font-display uppercase text-3xl md:text-4xl tracking-wide ${COLORS[color]}`}>
+      <Heading className={`font-display uppercase text-3xl md:text-4xl tracking-wide ${COLORS[color]}`}>
         {title}
-      </h2>
+      </Heading>
       <div className="linha-titulo" />
       {subtitle && (
         <p className="text-ocre mt-3 text-base md:text-lg">{subtitle}</p>
