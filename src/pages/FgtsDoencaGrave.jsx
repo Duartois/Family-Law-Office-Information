@@ -164,7 +164,7 @@ export default function FgtsDoencaGrave() {
         <LawyersCallout
           message={WHATSAPP_MESSAGES.fgts}
           ctaLabel="Tire suas dúvidas pelo WhatsApp"
-          text="Tire suas dúvidas sobre o saque do FGTS por doença grave com quem entende do assunto. O primeiro passo é uma conversa — sem burocracia, pelo WhatsApp."
+          text="Tire suas dúvidas sobre o saque do FGTS por doença grave. O primeiro passo é uma conversa pelo WhatsApp."
         />
       </main>
 

@@ -67,7 +67,12 @@ function buildPage(rendered, label) {
   entries.forEach((data, idx) => {
     extraHead.push(`<script type="application/ld+json" id="ld-json-${idx}">${escapeJson(data)}</script>`);
   });
-  return replaceOnce(page, /<\/head>/, `    ${extraHead.join('\n    ')}\n  </head>`, '</head>');
+  const result = replaceOnce(page, /<\/head>/, `    ${extraHead.join('\n    ')}\n  </head>`, '</head>');
+
+  // Nada de marcador de rascunho no site publicado: dado faltando fica fora da tela, não aparece como texto.
+  const leftover = result.match(/\[(?:PREENCHER|REVISAR)[^\]]*\]/);
+  if (leftover) throw new Error(`${label}: marcador de rascunho no HTML: ${leftover[0]}`);
+  return result;
 }
 
 async function writePage(fileName, content) {
