@@ -3,6 +3,11 @@
   // `wrangler deploy` cria um Worker novo e o domínio continua apontando para o antigo.
   "name": "family-law-office-information",
   "compatibility_date": "2026-10-22",
+  // O deploy da Cloudflare roda só `npx wrangler deploy` (o painel não tem comando de build),
+  // então o build precisa estar aqui; sem isso `./dist` não existe num clone limpo.
+  "build": {
+    "command": "npm run build"
+  },
   "assets": {
     // Gerado por `npm run build` (uma página HTML por rota + 404.html).
     "directory": "./dist",
