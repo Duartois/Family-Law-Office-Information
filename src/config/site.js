@@ -17,7 +17,7 @@ export const SITE = {
     district: 'Bela Vista - CEP 01311-200, São Paulo/SP',
   },
   // Domínio oficial, sem barra final. Usado por Seo.jsx, sitemap.xml e robots.txt.
-  siteUrl: 'https://www.coppieduarte.com.br',
+  siteUrl: 'https://www.coppiduarteadvocacia.com.br',
   // Mostra a etiqueta [REVISAR] nos textos novos que aguardam a aprovação das advogadas.
   // Passe para false quando eles forem aprovados.
   showReviewMarkers: true,
