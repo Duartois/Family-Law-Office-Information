@@ -1,16 +1,45 @@
-# React + Vite
+# Coppí & Duarte Advogadas Associadas — site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site institucional do escritório (Direito de Família e Sucessões, São Paulo/SP). Todo o contato é feito por WhatsApp.
 
-Currently, two official plugins are available:
+React 19 + Vite + Tailwind CSS v4 + React Router. Cada página é pré-renderizada em HTML estático no build e publicada como Worker com assets estáticos na Cloudflare.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Comandos
 
-## React Compiler
+```bash
+npm install
+npm run dev      # desenvolvimento (sem pré-renderização)
+npm run lint     # ESLint
+npm run build    # build + pré-renderização das páginas, 404.html, sitemap.xml e robots.txt
+npm run preview  # servir o build local
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Para testar como na produção (rotas, 404 e `_headers`): `npx wrangler dev` (roda o build antes).
 
-## Expanding the ESLint configuration
+## Onde mudar cada coisa
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| O quê | Onde |
+| --- | --- |
+| Nome, WhatsApp, e-mail, endereço, advogadas e OAB, domínio | `src/config/site.js` (`SITE`) |
+| Mensagens padrão do WhatsApp | `src/config/site.js` (`WHATSAPP_MESSAGES`) |
+| Páginas de área de atuação e FAQ comum | `src/content/areas.js` |
+| Página do saque do FGTS por doença grave | `src/pages/FgtsDoencaGrave.jsx` |
+| Cores e fontes | `src/index.css` |
+| Cabeçalhos de segurança (CSP) | `public/_headers` |
+| Ícones e imagem de compartilhamento | `public/` (`favicon.*`, `apple-touch-icon.png`, `og-image.jpg`) |
+
+O domínio (`SITE.siteUrl`) alimenta canonical, Open Graph, dados estruturados, `sitemap.xml` e `robots.txt`. Para uma página nova, crie a rota em `src/routes.jsx` e acrescente o caminho em `src/config/paths.js`.
+
+## Publicação (Cloudflare)
+
+- `wrangler.jsonc` define o Worker `family-law-office-information` e roda `npm run build` antes do deploy; o painel da Cloudflare só executa `npx wrangler deploy`.
+- Caminho inexistente devolve `404.html` com status 404.
+- **Não** crie `public/_redirects` com `/* /index.html 200`: a Cloudflare recusa o deploy (erro 100324).
+
+## Regras de conteúdo
+
+O texto segue o Provimento 205/2021 da OAB: sem promessa de resultado, sem preço, desconto ou gratuidade, sem casos ou decisões concretas. Se `[PREENCHER ...]` ou `[REVISAR ...]` chegar ao HTML, o build falha de propósito (`scripts/prerender.mjs`). Dado que ainda não existe deve ficar vazio e fora da tela.
+
+## Google Analytics 4 (opcional)
+
+Desligado por padrão. Para ligar, defina `VITE_GA_MEASUREMENT_ID` (formato `G-XXXXXXXXXX`) nas variáveis de build da Cloudflare; veja `.env.example`. O consentimento nasce negado (LGPD); falta um banner de consentimento para liberar a coleta completa (`grantAnalyticsConsent()` em `src/analytics.js`).
