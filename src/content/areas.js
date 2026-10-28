@@ -1,8 +1,7 @@
 // Conteúdo das páginas de área de atuação.
 //
-// Cada página descreve apenas o que o site já informa sobre o escritório; o que ainda falta
-// está marcado com TODO e fica fora da tela. Não há promessa de resultado, preço, caso ou
-// decisão (Provimento 205/2021 da OAB).
+// Cada página descreve apenas o que o site já informa sobre o escritório. Não há promessa de
+// resultado, preço, caso ou decisão (Provimento 205/2021 da OAB).
 //
 // Arquivo sem JSX para poder ser lido também pelos scripts de build.
 
@@ -110,8 +109,14 @@ export const AREAS = [
       'Atuação em ações de partilha de bens, com atendimento on-line ou presencial em São Paulo. Fale com o escritório pelo WhatsApp.',
     intro:
       'A Coppí & Duarte Advogadas Associadas atua em ações de partilha de bens, com atendimento on-line ou presencial.',
-    // TODO: seção "Como o escritório atua" em partilha de bens, quando as advogadas enviarem o texto.
     sections: [
+      {
+        heading: 'Como o escritório atua',
+        paragraphs: [
+          'A partilha de bens é a divisão do patrimônio entre as pessoas envolvidas, como ocorre em um divórcio, na dissolução de uma união estável ou em um inventário.',
+          'O escritório atua nessas ações com atendimento personalizado e humanizado, on-line ou presencial. O primeiro contato é feito pelo WhatsApp.',
+        ],
+      },
       {
         heading: 'Temas relacionados',
         paragraphs: [
@@ -136,9 +141,15 @@ export const AREAS = [
       'Atuação em ações de investigação de paternidade, com atendimento on-line ou presencial em São Paulo. Fale com o escritório pelo WhatsApp.',
     intro:
       'A Coppí & Duarte Advogadas Associadas atua em ações de investigação de paternidade, com atendimento on-line ou presencial.',
-    // TODO: seção "Como o escritório atua" em investigação de paternidade, quando as advogadas
-    // enviarem o texto.
-    sections: [],
+    sections: [
+      {
+        heading: 'Como o escritório atua',
+        paragraphs: [
+          'A investigação de paternidade é a ação judicial em que se busca o reconhecimento da paternidade.',
+          'O escritório atua nessas ações com atendimento personalizado e humanizado, on-line ou presencial. O primeiro contato é feito pelo WhatsApp.',
+        ],
+      },
+    ],
     faq: [
       {
         question: 'O escritório atua em investigação de paternidade?',

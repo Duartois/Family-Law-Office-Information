@@ -32,6 +32,16 @@ export default function About() {
             className="w-full max-w-xs border-4 border-white rounded-sm object-cover"
           />
         </div>
+
+        <ul className="mt-10 grid gap-8 sm:grid-cols-2 text-center">
+          {SITE.lawyers.map((lawyer) => (
+            <li key={lawyer.fullName}>
+              <p className="font-display uppercase tracking-wide text-2xl text-ocre">{lawyer.fullName}</p>
+              <p className="mt-1 text-white/80">Advogada e sócia</p>
+              <p className="text-white/80">{lawyer.oab}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

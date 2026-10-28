@@ -6,12 +6,13 @@ export const SITE = {
   fullName: 'Coppí & Duarte Advogadas Associadas',
   whatsappNumber: '5511987679957',
   whatsappDisplay: '(11) 98767-9957',
-  // TODO: e-mail oficial do escritório. Vazio = não aparece no rodapé nem nos dados estruturados.
-  email: '',
+  // E-mail principal. Vazio = não aparece no rodapé nem nos dados estruturados.
+  email: 'paulacoppi21@gmail.com',
   yearsOfExperience: '27',
+  // `name` é o nome usado no dia a dia do site; `fullName`, o nome completo com a OAB.
   lawyers: [
-    { name: 'Paula Coppi', oab: 'OAB/SP nº 179.424' },
-    { name: 'Viviane Duarte', oab: 'OAB/SP nº 201.298' },
+    { name: 'Paula Coppi', fullName: 'Paula Adriana Coppi', oab: 'OAB/SP nº 179.424' },
+    { name: 'Viviane Duarte', fullName: 'Viviane Duarte Gonçalves', oab: 'OAB/SP nº 201.298' },
   ],
   address: {
     street: 'Av. Paulista, nº 1.439, 1º andar, Cj. 12',

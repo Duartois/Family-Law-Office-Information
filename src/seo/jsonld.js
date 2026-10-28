@@ -16,6 +16,11 @@ export function buildLegalService(path = '/') {
     },
     areaServed: 'BR',
     url: absoluteUrl(path),
+    founder: SITE.lawyers.map((lawyer) => ({
+      '@type': 'Person',
+      name: lawyer.fullName,
+      jobTitle: 'Advogada',
+    })),
   };
   if (SITE.email) data.email = SITE.email;
   return data;

@@ -50,7 +50,7 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto mt-14 pt-8 pb-16 md:pb-0 border-t border-white/15 text-center text-xs text-white/60 space-y-1">
         <p>{SITE.fullName}</p>
         <p>
-          {SITE.lawyers.map((l) => `${l.name} — ${l.oab}`).join(' · ')}
+          {SITE.lawyers.map((l) => `${l.fullName} — ${l.oab}`).join(' · ')}
         </p>
         <p suppressHydrationWarning>
           &copy; {new Date().getFullYear()} {SITE.fullName}. Todos os direitos reservados.

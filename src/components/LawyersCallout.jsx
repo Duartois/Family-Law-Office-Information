@@ -25,7 +25,7 @@ export default function LawyersCallout({ message, text, ctaLabel = 'Fale conosco
           </WhatsAppCTA>
         </div>
         <p className="mt-6 text-sm text-gray-300">
-          {SITE.lawyers.map((l) => `${l.name} — ${l.oab}`).join(' · ')}
+          {SITE.lawyers.map((l) => `${l.fullName} — ${l.oab}`).join(' · ')}
         </p>
       </div>
     </section>
