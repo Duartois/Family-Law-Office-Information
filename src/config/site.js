@@ -20,6 +20,8 @@ export const SITE = {
   },
   // Domínio oficial, sem barra final. Usado por Seo.jsx, sitemap.xml e robots.txt.
   siteUrl: 'https://www.coppiduarteadvocacia.com.br',
+  // Imagem de pré-visualização do link (WhatsApp, redes sociais): public/og-image.jpg, 1200x630.
+  ogImagePath: '/og-image.jpg',
 };
 
 /** Texto alternativo da foto das sócias (usado em todas as páginas que a exibem). */
