@@ -1,16 +1,18 @@
 // Fonte única de verdade para os dados de contato e identidade do escritório.
-// Dados que ainda faltam ficam como [PREENCHER: ...]; use isPlaceholder() para
-// não tratá-los como dado real (ex.: mailto:, dados estruturados).
+// Dado que ainda não existe fica vazio (com um TODO) e some da tela; nunca texto provisório.
+// O build falha se algum marcador [PREENCHER] ou [REVISAR] chegar ao HTML (scripts/prerender.mjs).
 export const SITE = {
   name: 'Coppí & Duarte',
   fullName: 'Coppí & Duarte Advogadas Associadas',
   whatsappNumber: '5511987679957',
   whatsappDisplay: '(11) 98767-9957',
-  email: '[PREENCHER: e-mail oficial do escritório]',
+  // E-mail principal. Vazio = não aparece no rodapé nem nos dados estruturados.
+  email: 'paulacoppi21@gmail.com',
   yearsOfExperience: '27',
+  // `name` é o nome usado no dia a dia do site; `fullName`, o nome completo com a OAB.
   lawyers: [
-    { name: 'Paula Coppi', oab: 'OAB/SP nº [PREENCHER: OAB de Paula Coppi]' },
-    { name: 'Viviane Duarte', oab: 'OAB/SP nº 201.298' },
+    { name: 'Paula Coppi', fullName: 'Paula Adriana Coppi', oab: 'OAB/SP nº 179.424' },
+    { name: 'Viviane Duarte', fullName: 'Viviane Duarte Gonçalves', oab: 'OAB/SP nº 201.298' },
   ],
   address: {
     street: 'Av. Paulista, nº 1.439, 1º andar, Cj. 12',
@@ -18,14 +20,9 @@ export const SITE = {
   },
   // Domínio oficial, sem barra final. Usado por Seo.jsx, sitemap.xml e robots.txt.
   siteUrl: 'https://www.coppiduarteadvocacia.com.br',
-  // Mostra a etiqueta [REVISAR] nos textos novos que aguardam a aprovação das advogadas.
-  // Passe para false quando eles forem aprovados.
-  showReviewMarkers: true,
+  // Imagem de pré-visualização do link (WhatsApp, redes sociais): public/og-image.jpg, 1200x630.
+  ogImagePath: '/og-image.jpg',
 };
-
-export function isPlaceholder(value) {
-  return /\[PREENCHER/i.test(String(value ?? ''));
-}
 
 /** Texto alternativo da foto das sócias (usado em todas as páginas que a exibem). */
 export function sociasPhotoAlt() {

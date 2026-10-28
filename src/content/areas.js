@@ -1,8 +1,6 @@
 // Conteúdo das páginas de área de atuação.
 //
-// Texto novo = RASCUNHO para revisão das advogadas (aparece na tela com o marcador
-// [REVISAR]; ver SITE.showReviewMarkers). Cada página descreve apenas o que o site já
-// informa sobre o escritório; o que falta está como [PREENCHER: ...]. Não há promessa de
+// Cada página descreve apenas o que o site já informa sobre o escritório. Não há promessa de
 // resultado, preço, caso ou decisão (Provimento 205/2021 da OAB).
 //
 // Arquivo sem JSX para poder ser lido também pelos scripts de build.
@@ -31,7 +29,7 @@ export const AREAS = [
     cardTitle: 'Ações de divórcio ou dissolução de união estável',
     name: 'divórcio e dissolução de união estável',
     h1: 'Divórcio e dissolução de união estável',
-    seoTitle: 'Divórcio e Dissolução de União Estável em São Paulo | Coppí & Duarte',
+    seoTitle: 'Divórcio e Dissolução de União Estável em SP | Coppí & Duarte',
     description:
       'Atuação em ações de divórcio e de dissolução de união estável, consensuais e litigiosas, com atendimento on-line ou presencial em São Paulo. Fale pelo WhatsApp.',
     intro:
@@ -115,7 +113,8 @@ export const AREAS = [
       {
         heading: 'Como o escritório atua',
         paragraphs: [
-          '[PREENCHER: descrição, aprovada pelas advogadas, de como o escritório atua em partilha de bens]',
+          'A partilha de bens é a divisão do patrimônio entre as pessoas envolvidas, como ocorre em um divórcio, na dissolução de uma união estável ou em um inventário.',
+          'O escritório atua nessas ações com atendimento personalizado e humanizado, on-line ou presencial. O primeiro contato é feito pelo WhatsApp.',
         ],
       },
       {
@@ -146,7 +145,8 @@ export const AREAS = [
       {
         heading: 'Como o escritório atua',
         paragraphs: [
-          '[PREENCHER: descrição, aprovada pelas advogadas, de como o escritório atua em investigação de paternidade]',
+          'A investigação de paternidade é a ação judicial em que se busca o reconhecimento da paternidade.',
+          'O escritório atua nessas ações com atendimento personalizado e humanizado, on-line ou presencial. O primeiro contato é feito pelo WhatsApp.',
         ],
       },
     ],

@@ -1,4 +1,4 @@
-import { SITE, absoluteUrl, isPlaceholder } from '../config/site';
+import { SITE, absoluteUrl } from '../config/site';
 
 /** Dados estruturados LegalService do escritório, com a URL da página atual. */
 export function buildLegalService(path = '/') {
@@ -16,8 +16,13 @@ export function buildLegalService(path = '/') {
     },
     areaServed: 'BR',
     url: absoluteUrl(path),
+    founder: SITE.lawyers.map((lawyer) => ({
+      '@type': 'Person',
+      name: lawyer.fullName,
+      jobTitle: 'Advogada',
+    })),
   };
-  if (!isPlaceholder(SITE.email)) data.email = SITE.email;
+  if (SITE.email) data.email = SITE.email;
   return data;
 }
 

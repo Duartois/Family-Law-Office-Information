@@ -62,12 +62,25 @@ function buildPage(rendered, label) {
     const url = `${SITE.siteUrl}${seo.path}`;
     extraHead.push(`<link rel="canonical" href="${escapeAttr(url)}" />`);
     extraHead.push(`<meta property="og:url" content="${escapeAttr(url)}" />`);
+    // Pré-visualização do link ao compartilhar (WhatsApp, redes sociais): precisa de URL absoluta.
+    const image = `${SITE.siteUrl}${SITE.ogImagePath}`;
+    extraHead.push(`<meta property="og:site_name" content="${escapeAttr(SITE.fullName)}" />`);
+    extraHead.push(`<meta property="og:image" content="${escapeAttr(image)}" />`);
+    extraHead.push('<meta property="og:image:width" content="1200" />');
+    extraHead.push('<meta property="og:image:height" content="630" />');
+    extraHead.push(`<meta property="og:image:alt" content="${escapeAttr(`${SITE.fullName}: Direito de Família e Sucessões em São Paulo`)}" />`);
+    extraHead.push('<meta name="twitter:card" content="summary_large_image" />');
   }
   const entries = seo.jsonLd ? (Array.isArray(seo.jsonLd) ? seo.jsonLd : [seo.jsonLd]) : [];
   entries.forEach((data, idx) => {
     extraHead.push(`<script type="application/ld+json" id="ld-json-${idx}">${escapeJson(data)}</script>`);
   });
-  return replaceOnce(page, /<\/head>/, `    ${extraHead.join('\n    ')}\n  </head>`, '</head>');
+  const result = replaceOnce(page, /<\/head>/, `    ${extraHead.join('\n    ')}\n  </head>`, '</head>');
+
+  // Nada de marcador de rascunho no site publicado: dado faltando fica fora da tela, não aparece como texto.
+  const leftover = result.match(/\[(?:PREENCHER|REVISAR)[^\]]*\]/);
+  if (leftover) throw new Error(`${label}: marcador de rascunho no HTML: ${leftover[0]}`);
+  return result;
 }
 
 async function writePage(fileName, content) {

@@ -56,8 +56,8 @@ export default function FgtsDoencaGrave() {
   return (
     <>
       <Seo
-        title="Saque do FGTS por Doença Grave: Quem Tem Direito? | Coppí & Duarte"
-        description="Entenda quem pode sacar o FGTS por doença grave, quais doenças a lei prevê, o que fazer se a Caixa negar o pedido e como funciona a ação judicial. Tire suas dúvidas pelo WhatsApp."
+        title="FGTS por Doença Grave: Quem Tem Direito? | Coppí & Duarte"
+        description="Entenda quem pode sacar o FGTS por doença grave, quais doenças a lei prevê e o que fazer se a Caixa negar o pedido. Tire suas dúvidas pelo WhatsApp."
         path="/saque-fgts-doenca-grave"
         jsonLd={[LEGAL_SERVICE_JSON_LD, FAQ_JSON_LD]}
       />
@@ -164,7 +164,7 @@ export default function FgtsDoencaGrave() {
         <LawyersCallout
           message={WHATSAPP_MESSAGES.fgts}
           ctaLabel="Tire suas dúvidas pelo WhatsApp"
-          text="Tire suas dúvidas sobre o saque do FGTS por doença grave com quem entende do assunto. O primeiro passo é uma conversa — sem burocracia, pelo WhatsApp."
+          text="Tire suas dúvidas sobre o saque do FGTS por doença grave. O primeiro passo é uma conversa pelo WhatsApp."
         />
       </main>
 

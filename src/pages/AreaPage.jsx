@@ -5,7 +5,6 @@ import WhatsAppCTA from '../components/WhatsAppCTA';
 import SectionHeading from '../components/SectionHeading';
 import FaqAccordion from '../components/FaqAccordion';
 import LawyersCallout from '../components/LawyersCallout';
-import ReviewMarker from '../components/ReviewMarker';
 import Contact from '../components/Contact';
 import { WHATSAPP_MESSAGES } from '../config/site';
 import { areaPath } from '../config/paths';
@@ -36,10 +35,7 @@ export default function AreaPage({ area }) {
               {area.h1}
             </h1>
             <div className="linha-titulo" />
-            <p className="mt-6 text-lg leading-relaxed">
-              <ReviewMarker />
-              {area.intro}
-            </p>
+            <p className="mt-6 text-lg leading-relaxed">{area.intro}</p>
             <div className="mt-8 flex justify-center">
               <WhatsAppCTA message={message} size="lg">
                 Fale conosco pelo WhatsApp
@@ -55,7 +51,6 @@ export default function AreaPage({ area }) {
                 <SectionHeading title={section.heading} color="navy" align="left" />
                 {section.paragraphs.map((paragraph) => (
                   <p key={paragraph} className="mt-4 leading-relaxed">
-                    <ReviewMarker />
                     {paragraph}
                   </p>
                 ))}
@@ -86,14 +81,13 @@ export default function AreaPage({ area }) {
           <div className="max-w-3xl mx-auto">
             <SectionHeading title="Perguntas Frequentes" color="navy" />
             <div className="mt-10">
-              <FaqAccordion items={faqItems} markReview />
+              <FaqAccordion items={faqItems} />
             </div>
           </div>
         </section>
 
         <LawyersCallout
           message={message}
-          markReview
           text="Para falar sobre o seu caso, o contato com o escritório é feito pelo WhatsApp."
         />
       </main>

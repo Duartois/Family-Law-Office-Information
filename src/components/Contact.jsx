@@ -1,7 +1,7 @@
 import { Mail, MapPin } from 'lucide-react';
 import SectionHeading from './SectionHeading';
 import WhatsAppIcon from './icons/WhatsAppIcon';
-import { SITE, buildWhatsAppLink, isPlaceholder, WHATSAPP_MESSAGES } from '../config/site';
+import { SITE, buildWhatsAppLink, WHATSAPP_MESSAGES } from '../config/site';
 
 export default function Contact() {
   return (
@@ -10,19 +10,18 @@ export default function Contact() {
         <SectionHeading title="Informações de Contato" color="white" />
 
         <div className="mt-10 space-y-6">
-          <div className="flex items-start gap-4">
-            <Mail className="text-ocre flex-shrink-0 w-6 h-6 md:w-7 md:h-7" />
-            <div>
-              <h4 className="text-xs uppercase tracking-wide text-white/60 mb-1">E-mail</h4>
-              {isPlaceholder(SITE.email) ? (
-                <span className="text-white font-medium">{SITE.email}</span>
-              ) : (
+          {/* O e-mail só aparece quando o endereço oficial estiver em SITE.email. */}
+          {SITE.email && (
+            <div className="flex items-start gap-4">
+              <Mail className="text-ocre flex-shrink-0 w-6 h-6 md:w-7 md:h-7" />
+              <div>
+                <h4 className="text-xs uppercase tracking-wide text-white/60 mb-1">E-mail</h4>
                 <a href={`mailto:${SITE.email}`} className="text-white font-medium break-all">
                   {SITE.email}
                 </a>
-              )}
+              </div>
             </div>
-          </div>
+          )}
 
           <div className="flex items-start gap-4">
             <WhatsAppIcon className="text-ocre flex-shrink-0 w-6 h-6 md:w-7 md:h-7" />
@@ -51,7 +50,7 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto mt-14 pt-8 pb-16 md:pb-0 border-t border-white/15 text-center text-xs text-white/60 space-y-1">
         <p>{SITE.fullName}</p>
         <p>
-          {SITE.lawyers.map((l) => `${l.name} — ${l.oab}`).join(' · ')}
+          {SITE.lawyers.map((l) => `${l.fullName} — ${l.oab}`).join(' · ')}
         </p>
         <p suppressHydrationWarning>
           &copy; {new Date().getFullYear()} {SITE.fullName}. Todos os direitos reservados.
