@@ -29,7 +29,7 @@ export const AREAS = [
     cardTitle: 'Ações de divórcio ou dissolução de união estável',
     name: 'divórcio e dissolução de união estável',
     h1: 'Divórcio e dissolução de união estável',
-    seoTitle: 'Divórcio e Dissolução de União Estável em São Paulo | Coppí & Duarte',
+    seoTitle: 'Divórcio e Dissolução de União Estável em SP | Coppí & Duarte',
     description:
       'Atuação em ações de divórcio e de dissolução de união estável, consensuais e litigiosas, com atendimento on-line ou presencial em São Paulo. Fale pelo WhatsApp.',
     intro:
